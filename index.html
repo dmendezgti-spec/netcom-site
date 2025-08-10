@@ -2,658 +2,607 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NETCOM - Soluciones en Infraestructura TI | Penco, Chile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NETCOM - Soluciones Tecnológicas Integrales</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .hero-gradient {
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .gradient-bg {
             background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
         }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        
+        .tech-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid #2563eb;
         }
-        .map-container {
-            overflow: hidden;
-            padding-bottom: 56.25%;
-            position: relative;
-            height: 0;
+        
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
-        .map-container iframe {
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+            }
+        }
+        
+        .network-pattern {
+            background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
         }
     </style>
 </head>
-<body class="font-sans bg-gray-50">
+<body>
     <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fas fa-network-wired text-blue-600 text-2xl"></i>
-                <h1 class="text-2xl font-bold text-gray-800">NET<span class="text-blue-600">COM</span></h1>
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-network-wired text-3xl text-blue-300"></i>
+                    <h1 class="text-2xl font-bold">NET<span class="text-blue-300">COM</span></h1>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#inicio" class="hover:text-blue-300 transition">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-blue-300 transition">Servicios</a></li>
+                        <li><a href="#nosotros" class="hover:text-blue-300 transition">Nosotros</a></li>
+                        <li><a href="#testimonios" class="hover:text-blue-300 transition">Testimonios</a></li>
+                        <li><a href="#clientes" class="hover:text-blue-300 transition">Clientes</a></li>
+                        <li><a href="#contacto" class="hover:text-blue-300 transition">Contacto</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            
-            <nav class="hidden md:flex space-x-8">
-                <a href="#inicio" class="text-gray-700 hover:text-blue-600 font-medium">Inicio</a>
-                <a href="#servicios" class="text-gray-700 hover:text-blue-600 font-medium">Servicios</a>
-                <a href="#nosotros" class="text-gray-700 hover:text-blue-600 font-medium">Nosotros</a>
-                <a href="#proyectos" class="text-gray-700 hover:text-blue-600 font-medium">Proyectos</a>
-                <a href="#contacto" class="text-gray-700 hover:text-blue-600 font-medium">Contacto</a>
-            </nav>
-            
-            <button class="md:hidden text-gray-700">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero-gradient text-white py-20 md:py-32">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Soluciones Integrales en Infraestructura TI</h2>
-                <p class="text-xl mb-8 opacity-90">Especialistas en instalación de puntos de red, sistemas inalámbricos y cámaras de seguridad en Penco y toda la Región del Biobío.</p>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#contacto" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300 text-center">Contáctanos</a>
-                    <a href="#servicios" class="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-600 transition duration-300 text-center">Nuestros Servicios</a>
+    <section id="inicio" class="gradient-bg text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-transparent"></div>
+            <div class="absolute inset-0 network-pattern"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Soluciones Tecnológicas <span class="text-blue-300">Integrales</span></h2>
+                    <p class="text-xl mb-8 text-blue-100">Especialistas en infraestructura TI, seguridad y conectividad para empresas de todos los tamaños.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contacto" class="bg-white text-blue-800 px-6 py-3 rounded-lg font-semibold hover:bg-blue-100 transition">Contáctanos</a>
+                        <a href="#servicios" class="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Nuestros Servicios</a>
+                    </div>
                 </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center">
-                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Infraestructura de red" class="rounded-xl shadow-2xl max-w-full h-auto">
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                             alt="Infraestructura TI" 
+                             class="rounded-xl shadow-2xl w-full max-w-lg"
+                             srcset="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80 300w,
+                                     https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80 600w,
+                                     https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80 1470w"
+                             sizes="(max-width: 640px) 100vw, 50vw">
+                        <div class="absolute -bottom-5 -right-5 bg-blue-600 p-4 rounded-lg shadow-lg">
+                            <i class="fas fa-shield-alt text-3xl text-white"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="servicios" class="py-16 bg-white">
+    <section id="servicios" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nuestros Servicios Especializados</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestros <span class="text-blue-600">Servicios</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ofrecemos soluciones completas en infraestructura tecnológica para optimizar el rendimiento y seguridad de su empresa.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card bg-white rounded-lg shadow-lg p-6 transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-ethernet text-4xl"></i>
+                <!-- Cableado Estructurado -->
+                <div class="tech-card bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-ethernet text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Cableado Estructurado</h3>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Instalación de Puntos de Red</h3>
-                    <p class="text-gray-600">Implementación profesional de infraestructura cableada CAT5e, CAT6 y fibra óptica para redes empresariales con certificación de canal.</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Diseño de topologías de red</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Certificación de cables</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Soluciones estructuradas</span>
-                        </li>
+                    <p class="text-gray-600 mb-6">Diseño e implementación de redes de cableado estructurado categoría 5e, 6 y 6a para óptimo desempeño.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Instalación profesional</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Certificación de puntos</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Soluciones escalables</li>
                     </ul>
                 </div>
                 
-                <!-- Service 2 -->
-                <div class="service-card bg-white rounded-lg shadow-lg p-6 transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-wifi text-4xl"></i>
+                <!-- Certificación de Red -->
+                <div class="tech-card bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-certificate text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Certificación de Puntos de Red</h3>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Sistemas Inalámbricos</h3>
-                    <p class="text-gray-600">Implementación de redes WiFi empresariales de alto desempeño con cobertura garantizada y seguridad robusta.</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Estudios de cobertura</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Soluciones mesh</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Puntos de acceso empresariales</span>
-                        </li>
+                    <p class="text-gray-600 mb-6">Certificación de puntos de red con equipos de última generación para garantizar el cumplimiento de estándares.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Pruebas de rendimiento</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Documentación completa</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Cumplimiento de normas</li>
                     </ul>
                 </div>
                 
-                <!-- Service 3 -->
-                <div class="service-card bg-white rounded-lg shadow-lg p-6 transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-video text-4xl"></i>
+                <!-- Cámaras de Seguridad -->
+                <div class="tech-card bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-video text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Cámaras de Seguridad</h3>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Cámaras de Seguridad</h3>
-                    <p class="text-gray-600">Sistemas de videovigilancia IP y analógicos con grabación digital, monitoreo remoto y análisis inteligente de video.</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Cámaras IP 4K/5MP</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Sistemas NVR/DVR</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Control de accesos</span>
-                        </li>
+                    <p class="text-gray-600 mb-6">Instalación de sistemas de videovigilancia Hikvision con técnicos certificados. Soluciones analógicas e IP con tecnología de punta para su protección.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Sistemas HD y 4K</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Monitoreo remoto</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Almacenamiento en la nube</li>
                     </ul>
                 </div>
                 
-                <!-- Service 4 -->
-                <div class="service-card bg-white rounded-lg shadow-lg p-6 transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-server text-4xl"></i>
+                <!-- Accesos Perimetrales -->
+                <div class="tech-card bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-lock text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Accesos Perimetrales</h3>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Centros de Datos</h3>
-                    <p class="text-gray-600">Diseño e implementación de salas de servidores con climatización, UPS y sistemas de respaldo energético.</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Racks y gabinetes</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Sistemas de enfriamiento</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Monitoreo ambiental</span>
-                        </li>
+                    <p class="text-gray-600 mb-6">Sistemas de control de acceso biométricos, tarjetas RFID y soluciones integradas para seguridad perimetral.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Control de visitantes</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Integración con alarmas</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Reportes automatizados</li>
                     </ul>
                 </div>
                 
-                <!-- Service 5 -->
-                <div class="service-card bg-white rounded-lg shadow-lg p-6 transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-phone-alt text-4xl"></i>
+                <!-- Soporte Computacional -->
+                <div class="tech-card bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-laptop-code text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Soporte Computacional</h3>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Telefonía IP</h3>
-                    <p class="text-gray-600">Implementación de centrales telefónicas virtuales (PBX) con funcionalidades avanzadas para empresas.</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Centrales virtuales</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Integración con CRM</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Videoconferencia</span>
-                        </li>
+                    <p class="text-gray-600 mb-6">Asistencia técnica especializada para equipos de cómputo, servidores y redes empresariales.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Soporte remoto y presencial</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Mantenimiento preventivo</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Soluciones a medida</li>
                     </ul>
                 </div>
                 
-                <!-- Service 6 -->
-                <div class="service-card bg-white rounded-lg shadow-lg p-6 transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-shield-alt text-4xl"></i>
+                <!-- Mejoras de WiFi -->
+                <div class="tech-card bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-wifi text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Mejoras de Sistema WiFi</h3>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Seguridad Perimetral</h3>
-                    <p class="text-gray-600">Sistemas integrales de protección para empresas con control de accesos y alarmas de intrusión.</p>
-                    <ul class="mt-4 space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Control de accesos</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Alarmas de intrusión</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                            <span>Cerraduras electrónicas</span>
-                        </li>
+                    <p class="text-gray-600 mb-6">Optimización de redes inalámbricas empresariales con equipos Ubiquiti y MikroTik para máxima cobertura y rendimiento.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Análisis de cobertura</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Instalación profesional</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Portal cautivo personalizado</li>
+                    </ul>
+                </div>
+
+                <!-- Soporte Educativo -->
+                <div class="tech-card bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-graduation-cap text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Soporte a Instituciones Educativas</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Soluciones tecnológicas especializadas para colegios y universidades, incluyendo redes seguras y control de acceso.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Aulas digitales</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Filtrado de contenido</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Soporte especializado</li>
+                    </ul>
+                </div>
+
+                <!-- Consultoría TI -->
+                <div class="tech-card bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-chart-line text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Consultoría en Infraestructura TI</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Asesoramiento experto para diseñar, implementar y optimizar la infraestructura tecnológica de su empresa.</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Auditorías tecnológicas</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Planes de contingencia</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Optimización de recursos</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="nosotros" class="py-16 bg-gray-50">
+    <!-- About Us -->
+    <section id="nosotros" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Equipo NETCOM" class="rounded-lg shadow-xl w-full">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Equipo NETCOM" class="rounded-xl shadow-lg w-full">
                 </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre NETCOM</h2>
-                    <p class="text-gray-600 mb-6">NETCOM es una empresa especializada en infraestructura tecnológica con sede en Penco, Chile. Desde nuestro inicio en 2010, nos hemos dedicado a proveer soluciones de conectividad y seguridad para empresas e instituciones de la Región del Biobío.</p>
-                    <p class="text-gray-600 mb-6">Nuestro equipo está compuesto por ingenieros y técnicos certificados en las principales tecnologías de red y seguridad, lo que nos permite ofrecer soluciones robustas y garantizadas.</p>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Sobre <span class="text-blue-600">NETCOM</span></h2>
+                    <p class="text-gray-600 mb-6">NETCOM es una empresa especializada en soluciones tecnológicas integrales, con más de 10 años de experiencia en el mercado. Nos dedicamos a proveer servicios de alta calidad en infraestructura TI, seguridad y conectividad.</p>
                     
-                    <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="bg-white p-4 rounded-lg shadow">
-                            <div class="text-blue-600 mb-2">
-                                <i class="fas fa-medal text-2xl"></i>
+                    <div class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-bullseye text-blue-600"></i>
                             </div>
-                            <h4 class="font-bold text-gray-800">+12 Años</h4>
-                            <p class="text-sm text-gray-600">de experiencia en el mercado</p>
+                            <h3 class="text-xl font-semibold text-gray-800">Nuestra Misión</h3>
                         </div>
-                        <div class="bg-white p-4 rounded-lg shadow">
-                            <div class="text-blue-600 mb-2">
-                                <i class="fas fa-project-diagram text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-gray-800">+350</h4>
-                            <p class="text-sm text-gray-600">proyectos ejecutados</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow">
-                            <div class="text-blue-600 mb-2">
-                                <i class="fas fa-users text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-gray-800">+120</h4>
-                            <p class="text-sm text-gray-600">clientes satisfechos</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow">
-                            <div class="text-blue-600 mb-2">
-                                <i class="fas fa-award text-2xl"></i>
-                            </div>
-                            <h4 class="font-bold text-gray-800">15+</h4>
-                            <p class="text-sm text-gray-600">certificaciones técnicas</p>
-                        </div>
+                        <p class="text-gray-600 ml-12">Proveer soluciones tecnológicas innovadoras y confiables que impulsen la productividad y seguridad de nuestros clientes, mediante un servicio personalizado y profesional.</p>
                     </div>
                     
-                    <a href="#contacto" class="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Conoce más sobre nosotros</a>
+                    <div class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-eye text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Nuestra Visión</h3>
+                        </div>
+                        <p class="text-gray-600 ml-12">Ser reconocidos como líderes en implementación de infraestructura tecnológica, destacando por nuestra excelencia técnica y compromiso con la satisfacción del cliente.</p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-award text-blue-500 text-2xl mr-3"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">+10 años</p>
+                                <p class="text-sm text-gray-600">de experiencia</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-project-diagram text-blue-500 text-2xl mr-3"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">+500</p>
+                                <p class="text-sm text-gray-600">proyectos completados</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-users text-blue-500 text-2xl mr-3"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">+200</p>
+                                <p class="text-sm text-gray-600">clientes satisfechos</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="proyectos" class="py-16 bg-white">
+    <!-- Testimonials -->
+    <section id="testimonios" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nuestros Proyectos Destacados</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Proyecto 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Red Corporativa para Municipalidad</h3>
-                        <p class="text-gray-600 mb-4">Implementación de red cableada e inalámbrica para la Municipalidad de Penco con 120 puntos de red y cobertura WiFi en todas sus dependencias.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Cableado Estructurado</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">WiFi Empresarial</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Seguridad</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1563770660941-10a63607739e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Proyecto 2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sistema de Seguridad para Retail</h3>
-                        <p class="text-gray-600 mb-4">Implementación de sistema de videovigilancia con 32 cámaras IP 4K y control de accesos para cadena de retail en Concepción.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Cámaras IP</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Control de Accesos</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">NVR</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Proyecto 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Data Center para Universidad</h3>
-                        <p class="text-gray-600 mb-4">Diseño e implementación de sala de servidores con climatización, UPS y sistema de monitoreo para universidad regional.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Centro de Datos</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Climatización</span>
-                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">UPS</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#contacto" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-300">¿Quieres un proyecto similar?</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Lo que dicen nuestros clientes</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Testimonios de <span class="text-blue-600">Clientes</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Lo que dicen nuestros clientes sobre nuestros servicios</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="text-yellow-400 mr-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                <!-- Testimonio 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Juan Pérez</h4>
+                            <p class="text-sm text-gray-500">Gerente IT, Empresa XYZ</p>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic mb-6">"NETCOM implementó nuestra red corporativa con total profesionalismo. Desde el diseño inicial hasta la implementación final, todo fue impecable. Llevamos 3 años sin problemas."</p>
-                    <div class="flex items-center">
-                        <div class="bg-blue-100 text-blue-800 font-bold rounded-full w-12 h-12 flex items-center justify-center mr-4">JC</div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">Juan Contreras</h4>
-                            <p class="text-sm text-gray-600">Gerente TI, Empresa Logística</p>
-                        </div>
+                    <p class="text-gray-600 italic">"NETCOM implementó nuestro cableado estructurado con profesionalismo y atención al detalle. El proyecto se completó antes de lo esperado y con cero problemas post-instalación."</p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
                 </div>
                 
-                <!-- Testimonial 2 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="text-yellow-400 mr-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                <!-- Testimonio 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">María González</h4>
+                            <p class="text-sm text-gray-500">Directora, Colegio ABC</p>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic mb-6">"El sistema de cámaras que instalaron en nuestro retail ha sido fundamental para reducir pérdidas. La calidad de imagen es excelente y el soporte post-venta muy responsable."</p>
-                    <div class="flex items-center">
-                        <div class="bg-blue-100 text-blue-800 font-bold rounded-full w-12 h-12 flex items-center justify-center mr-4">MP</div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">María Pérez</h4>
-                            <p class="text-sm text-gray-600">Gerente de Operaciones, Cadena Retail</p>
-                        </div>
+                    <p class="text-gray-600 italic">"El sistema de cámaras instalado por NETCOM ha mejorado enormemente nuestra seguridad. Su equipo fue muy profesional y nos brindó capacitación completa para el personal."</p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
                 </div>
                 
-                <!-- Testimonial 3 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="text-yellow-400 mr-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                <!-- Testimonio 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Carlos Rojas</h4>
+                            <p class="text-sm text-gray-500">Dueño, Cadena de Retail</p>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic mb-6">"Como institución educativa, necesitábamos una red robusta y segura. NETCOM entendió perfectamente nuestros requerimientos y entregó una solución a medida con excelente relación costo-beneficio."</p>
-                    <div class="flex items-center">
-                        <div class="bg-blue-100 text-blue-800 font-bold rounded-full w-12 h-12 flex items-center justify-center mr-4">RG</div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">Roberto González</h4>
-                            <p class="text-sm text-gray-600">Director, Colegio Particular</p>
-                        </div>
+                    <p class="text-gray-600 italic">"Excelente servicio de soporte computacional. Responden rápido y solucionan nuestros problemas técnicos de manera eficiente. Los recomiendo completamente."</p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contacto" class="py-16 bg-white">
+    <!-- Clients -->
+    <section id="clientes" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contáctanos</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nuestros <span class="text-blue-600">Clientes</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hemos trabajado con empresas de diversos sectores, brindando soluciones tecnológicas a medida.</p>
             </div>
             
-            <div class="flex flex-col lg:flex-row gap-12">
-                <div class="lg:w-1/2">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Estamos en Penco para servirte</h3>
-                    
-                    <div class="space-y-6 mb-8">
-                        <div class="flex items-start">
-                            <div class="text-blue-600 mt-1 mr-4">
-                                <i class="fas fa-map-marker-alt text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Dirección</h4>
-                                <p class="text-gray-600">Penco, Región del Biobío, Chile</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="text-blue-600 mt-1 mr-4">
-                                <i class="fas fa-phone-alt text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Teléfono</h4>
-                                <p class="text-gray-600">+56954293135</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="text-blue-600 mt-1 mr-4">
-                                <i class="fas fa-envelope text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Email</h4>
-                                <p class="text-gray-600">d.mendezgti@gmail.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="text-blue-600 mt-1 mr-4">
-                                <i class="fas fa-clock text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 mb-1">Horario de Atención</h4>
-                                <p class="text-gray-600">Lunes a Viernes: 9:00 - 18:00 hrs<br>Sábado: 10:00 - 14:00 hrs</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h4 class="font-bold text-gray-800 mb-4">Síguenos en redes sociales</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-700 transition duration-300">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="bg-blue-400 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-500 transition duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="bg-pink-600 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-pink-700 transition duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="bg-blue-700 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-blue-800 transition duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="mt-8">
-                        <div class="map-container rounded-lg shadow-lg">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.272143423635!2d-72.9965519241643!3d-36.74078367235777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9668224f47c6e8a5%3A0x3f4baefdc3b6e0a8!2sPenco%2C%20Biob%C3%ADo!5e0!3m2!1ses-419!2scl!4v1689874567890!5m2!1ses-419!2scl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                <div class="bg-gray-50 p-8 rounded-lg flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Ubiquiti_Networks_logo.svg/1200px-Ubiquiti_Networks_logo.svg.png" alt="Ubiquiti" class="h-12 object-contain">
                 </div>
-                
-                <div class="lg:w-1/2">
-                    <form class="bg-gray-50 p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Envía un mensaje</h3>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="nombre" class="block text-gray-700 font-medium mb-2">Nombre *</label>
-                                <input type="text" id="nombre" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" required>
-                            </div>
-                            <div>
-                                <label for="apellido" class="block text-gray-700 font-medium mb-2">Apellido *</label>
-                                <input type="text" id="apellido" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" required>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="email" class="block text-gray-700 font-medium mb-2">Email *</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" required>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="telefono" class="block text-gray-700 font-medium mb-2">Teléfono</label>
-                            <input type="tel" id="telefono" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="servicio" class="block text-gray-700 font-medium mb-2">Servicio de interés</label>
-                            <select id="servicio" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                                <option value="">Seleccione un servicio</option>
-                                <option value="cableado">Cableado Estructurado</option>
-                                <option value="inalambrico">Sistemas Inalámbricos</option>
-                                <option value="camaras">Cámaras de Seguridad</option>
-                                <option value="datacenter">Centros de Datos</option>
-                                <option value="telefonia">Telefonía IP</option>
-                                <option value="seguridad">Seguridad Perimetral</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="mensaje" class="block text-gray-700 font-medium mb-2">Mensaje *</label>
-                            <textarea id="mensaje" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Enviar Mensaje</button>
-                    </form>
+                <div class="bg-gray-50 p-8 rounded-lg flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/MikroTik_logo.svg/1200px-MikroTik_logo.svg.png" alt="MikroTik" class="h-12 object-contain">
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg flex justify-center">
+                    <img src="https://www.hikvision.com/content/dam/hikvision/products/S000000001/S000000132/S000000133/S000000134/O000010375.png" alt="Hikvision" class="h-12 object-contain">
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg flex justify-center">
+                    <i class="fas fa-building text-4xl text-gray-400"></i>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg flex justify-center">
+                    <i class="fas fa-hospital text-4xl text-gray-400"></i>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg flex justify-center">
+                    <i class="fas fa-school text-4xl text-gray-400"></i>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg flex justify-center">
+                    <i class="fas fa-store text-4xl text-gray-400"></i>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg flex justify-center">
+                    <i class="fas fa-industry text-4xl text-gray-400"></i>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-blue-50 rounded-xl p-8">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">¿Listo para transformar tu infraestructura tecnológica?</h3>
+                        <p class="text-gray-600">Contáctanos hoy mismo para una consultoría sin costo.</p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-end">
+                        <a href="#contacto" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Solicitar Cotización
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Clients Section -->
-    <section class="py-12 bg-gray-50">
+    <!-- Contact -->
+    <section id="contacto" class="py-20 bg-gray-900 text-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h3 class="text-xl font-bold text-gray-800 mb-4">Confían en nosotros</h3>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contácta a <span class="text-blue-400">NETCOM</span></h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Estamos listos para ayudarte con cualquier proyecto de infraestructura tecnológica.</p>
             </div>
             
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                <div class="w-32 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-                    <img src="https://via.placeholder.com/160x80?text=Municipalidad" alt="Municipalidad" class="max-h-full max-w-full">
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="lg:w-1/2">
+                    <form class="space-y-6" method="POST" action="send_email.php">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="nombre" class="block mb-2">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="empresa" class="block mb-2">Empresa</label>
+                                <input type="text" id="empresa" name="empresa" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block mb-2">Correo electrónico</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="telefono" class="block mb-2">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="servicio" class="block mb-2">Servicio de interés</label>
+                            <select id="servicio" name="servicio" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                <option value="">Seleccione un servicio</option>
+                                <option value="cableado">Cableado Estructurado</option>
+                                <option value="certificacion">Certificación de Red</option>
+                                <option value="camaras">Cámaras de Seguridad</option>
+                                <option value="accesos">Accesos Perimetrales</option>
+                                <option value="soporte">Soporte Computacional</option>
+                                <option value="wifi">Mejoras de WiFi</option>
+                                <option value="educacion">Soporte a Instituciones Educativas</option>
+                                <option value="consultoria">Consultoría TI</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="mensaje" class="block mb-2">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition w-full md:w-auto">
+                            Enviar Mensaje
+                        </button>
+                    </form>
                 </div>
-                <div class="w-32 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-                    <img src="https://via.placeholder.com/160x80?text=Universidad" alt="Universidad" class="max-h-full max-w-full">
-                </div>
-                <div class="w-32 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-                    <img src="https://via.placeholder.com/160x80?text=Retail" alt="Retail" class="max-h-full max-w-full">
-                </div>
-                <div class="w-32 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-                    <img src="https://via.placeholder.com/160x80?text=Hospital" alt="Hospital" class="max-h-full max-w-full">
-                </div>
-                <div class="w-32 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition duration-300">
-                    <img src="https://via.placeholder.com/160x80?text=Banco" alt="Banco" class="max-h-full max-w-full">
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-800 p-8 rounded-xl h-full">
+                        <h3 class="text-xl font-bold mb-6">Información de Contacto</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Dirección</h4>
+                                    <p class="text-gray-300">Penco, Concepción</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Teléfonos</h4>
+                                    <p class="text-gray-300">+56954293135</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Correo electrónico</h4>
+                                    <p class="text-gray-300">d.mendezgti@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold mb-1">Horario de atención</h4>
+                                    <p class="text-gray-300">Lunes a Viernes: 9:00 - 18:00 hrs<br>Sábados: 10:00 - 14:00 hrs</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-700">
+                            <h4 class="font-semibold mb-4">Síguenos en redes sociales</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-gray-700 hover:bg-blue-600 p-3 rounded-full transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-blue-400 p-3 rounded-full transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-blue-700 p-3 rounded-full transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-pink-600 p-3 rounded-full transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
+    <footer class="bg-gray-800 text-gray-300 py-10">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <i class="fas fa-network-wired text-blue-400 text-2xl"></i>
-                        <h3 class="text-xl font-bold">NET<span class="text-blue-400">COM</span></h3>
-                    </div>
-                    <p class="text-gray-400 mb-4">Especialistas en infraestructura TI con más de 12 años de experiencia en la Región del Biobío.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <i class="fas fa-network-wired text-2xl text-blue-400 mr-3"></i>
+                    <h3 class="text-xl font-bold">NET<span class="text-blue-400">COM</span></h3>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="mb-2">© 2023 NETCOM - Todos los derechos reservados</p>
+                    <div class="flex justify-center md:justify-end space-x-4 text-sm">
+                        <a href="#" class="hover:text-blue-400 transition">Términos y condiciones</a>
+                        <a href="#" class="hover:text-blue-400 transition">Política de privacidad</a>
                     </div>
                 </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Servicios</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Cableado Estructurado</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Redes Inalámbricas</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Cámaras de Seguridad</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Centros de Datos</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Telefonía IP</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition duration-300">Inicio</a></li>
-                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-300">Servicios</a></li>
-                        <li><a href="#nosotros" class="text-gray-400 hover:text-white transition duration-300">Nosotros</a></li>
-                        <li><a href="#proyectos" class="text-gray-400 hover:text-white transition duration-300">Proyectos</a></li>
-                        <li><a href="#contacto" class="text-gray-400 hover:text-white transition duration-300">Contacto</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Contacto</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-blue-400"></i>
-                            <span>Av. Los Carrera 1234, Penco, Chile</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-phone-alt mt-1 mr-2 text-blue-400"></i>
-                            <span>+56954293135</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-envelope mt-1 mr-2 text-blue-400"></i>
-                            <span>d.mendezgti@gmail.com</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 NETCOM - Soluciones en Infraestructura TI. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition duration-300 hidden">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- Floating WhatsApp -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/56954293135" class="bg-green-500 text-white p-4 rounded-full shadow-lg flex items-center justify-center pulse-animation" style="width: 60px; height: 60px;">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
 
     <script>
-        // Back to Top Button
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.remove('hidden');
-            } else {
-                backToTopButton.classList.add('hidden');
-            }
+        // Simple smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
         
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Mobile menu toggle (simplified for this example)
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            // In a real implementation, you would toggle a mobile menu here
+            alert('Menú móvil: En una implementación real, aquí se mostraría el menú desplegable');
         });
-        
-        // Mobile Menu Toggle (would need additional implementation)
-        const mobileMenuButton = document.querySelector('.md\\:hidden');
-        // Add click event for mobile menu here
     </script>
 </body>
-
 </html>
