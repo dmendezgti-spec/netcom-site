@@ -372,43 +372,54 @@
                 </div>
                 
                 <div class="md:w-1/2">
-                    <form class="bg-white rounded-lg shadow-xl p-8 text-gray-800" data-netlify="true" name="contacto" method="POST">
-                        <div class="mb-6">
-                            <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre Completo</label>
-                            <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary" required>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="email" class="block text-gray-700 font-bold mb-2">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary" required>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="telefono" class="block text-gray-700 font-bold mb-2">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="servicio" class="block text-gray-700 font-bold mb-2">Servicio de Interés</label>
-                            <select id="servicio" name="servicio" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
-                                <option value="">Seleccione un servicio</option>
-                                <option value="redes">Instalación de Redes</option>
-                                <option value="camaras">Cámaras de Seguridad</option>
-                                <option value="reparacion">Reparación de Computadoras</option>
-                                <option value="software">Instalación de Software</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="mensaje" class="block text-gray-700 font-bold mb-2">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-secondary hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
-                            Enviar Mensaje
-                        </button>
-                    </form>
+                   <form class="bg-white rounded-lg shadow-xl p-8 text-gray-800"
+      name="contacto"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/gracias.html">
+  <input type="hidden" name="form-name" value="contacto" />
+  <p class="hidden">
+    <label>No llenar: <input name="bot-field" /></label>
+  </p>
+
+  <div class="mb-6">
+    <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre Completo</label>
+    <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary" required>
+  </div>
+
+  <div class="mb-6">
+    <label for="email" class="block text-gray-700 font-bold mb-2">Correo Electrónico</label>
+    <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary" required>
+  </div>
+
+  <div class="mb-6">
+    <label for="telefono" class="block text-gray-700 font-bold mb-2">Teléfono</label>
+    <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+  </div>
+
+  <div class="mb-6">
+    <label for="servicio" class="block text-gray-700 font-bold mb-2">Servicio de Interés</label>
+    <select id="servicio" name="servicio" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+      <option value="">Seleccione un servicio</option>
+      <option value="redes">Instalación de Redes</option>
+      <option value="camaras">Cámaras de Seguridad</option>
+      <option value="reparacion">Reparación de Computadoras</option>
+      <option value="software">Instalación de Software</option>
+      <option value="otro">Otro</option>
+    </select>
+  </div>
+
+  <div class="mb-6">
+    <label for="mensaje" class="block text-gray-700 font-bold mb-2">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary" required></textarea>
+  </div>
+
+  <button type="submit" class="w-full bg-secondary hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+    Enviar Mensaje
+  </button>
+</form>
+
                 </div>
             </div>
         </div>
@@ -530,4 +541,5 @@
     </script>
 </body>
 </html>
+
 
