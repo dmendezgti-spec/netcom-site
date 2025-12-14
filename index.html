@@ -4,155 +4,120 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>NETCOM | Redes & CCTV en Biobío</title>
-  <link rel="canonical" href="https://netcom.cl/" />
+  <title>NETCOM - Redes y CCTV en Biobío</title>
 
-  <meta name="description" content="NETCOM: instalación y mantención de redes/WiFi y CCTV para condominios, empresas y hogares en Biobío. Cableado estructurado, gabinetes, DVR/NVR, soporte TI y domótica." />
-  <meta name="keywords" content="redes, wifi, cctv, cámaras de seguridad, mantención cctv, cableado estructurado, nvr, dvr, hikvision, biobío, concepción, penco" />
-  <meta name="theme-color" content="#0B1F3B" />
+  <link rel="canonical" href="https://netcom.cl" />
+  <meta name="description" content="NETCOM: Redes, WiFi y CCTV. Ingeniería en conectividad y redes, instalación y mantención de videovigilancia, soporte TI y domótica. Atención en Biobío y alrededores." />
+  <meta name="keywords" content="redes, wifi, cctv, cámaras de seguridad, hikvision, soporte TI, domótica, automatización, mantención, biobío, concepción, penco" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="NETCOM | Redes & CCTV en Biobío" />
-  <meta property="og:description" content="Instalación y mantención de redes/WiFi y CCTV. Trabajo limpio, documentado y mantenible." />
+  <meta property="og:title" content="NETCOM - Redes y CCTV en Biobío" />
+  <meta property="og:description" content="Redes, WiFi y CCTV con estándar profesional. Ingenieros en conectividad y redes. Atención en Biobío y alrededores." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://netcom.cl/" />
+  <meta property="og:url" content="https://netcom.cl" />
   <meta property="og:image" content="https://netcom.cl/og-image.jpg" />
 
   <link rel="icon" href="/favicon.ico" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="preconnect" href="https://images.pexels.com" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            nc: {
-              primary: '#0B1F3B',
-              cyan: '#00B7C2',
-              amber: '#FFB020',
-              bg: '#F6F8FB',
-              ink: '#0B0F18'
-            }
-          },
-          fontFamily: {
-            sans: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-          },
+            primary: '#0A2A43',
+            secondary: '#FF6600',
+          }
         }
       }
     }
   </script>
 
   <style>
-    :root{
-      --nc-primary:#0B1F3B;
-      --nc-cyan:#00B7C2;
-      --nc-amber:#FFB020;
-      --nc-bg:#F6F8FB;
-    }
-
-    /* Hero: más “NETCOM” (tech + seguridad) */
     .hero {
       background:
-        radial-gradient(900px 520px at 18% 18%, rgba(0,183,194,.18), transparent 55%),
-        radial-gradient(760px 460px at 85% 30%, rgba(255,176,32,.14), transparent 60%),
-        linear-gradient(rgba(11,31,59,.88), rgba(11,31,59,.88)),
-        url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=80');
+        linear-gradient(rgba(10, 42, 67, 0.82), rgba(10, 42, 67, 0.82)),
+        url('https://images.unsplash.com/photo-1563770660941-10a636077d33?auto=format&fit=crop&w=1470&q=80');
       background-size: cover;
       background-position: center;
       min-height: 92vh;
     }
-
-    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 14px 32px rgba(0,0,0,0.18); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 12px 28px rgba(0,0,0,.12); }
     .portfolio-item:hover .portfolio-overlay { opacity: 1; }
     .portfolio-overlay { transition: all .25s ease; opacity: 0; }
-
     .nav-link { position: relative; }
     .nav-link::after {
-      content:'';
-      position:absolute;
-      width:0;
-      height:2px;
-      bottom:-6px;
-      left:0;
-      background-color: var(--nc-amber);
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #FF6600;
       transition: width .25s ease;
     }
-    .nav-link:hover::after { width:100%; }
-
+    .nav-link:hover::after { width: 100%; }
     .whatsapp-btn { animation: pulse 2s infinite; }
     @keyframes pulse {
-      0% { box-shadow:0 0 0 0 rgba(37,211,102,.65); }
-      70% { box-shadow:0 0 0 16px rgba(37,211,102,0); }
-      100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,.65); }
+      70% { box-shadow: 0 0 0 16px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
     }
   </style>
 
-  <!-- LocalBusiness Schema -->
+  <!-- LocalBusiness structured data -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"NETCOM",
-    "url":"https://netcom.cl/",
-    "telephone":"+56954293135",
-    "email":"netcom.ti.cl@gmail.com",
-    "areaServed":"Región del Biobío, Chile",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Penco",
-      "addressRegion":"Biobío",
-      "addressCountry":"CL"
-    },
-    "sameAs":[
-      "https://netcom.cl/"
-    ]
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "NETCOM",
+    "url": "https://netcom.cl",
+    "email": "netcom.ti.cl@gmail.com",
+    "telephone": "+56 9 5429 3135",
+    "areaServed": "Región del Biobío, Chile",
+    "description": "Redes, WiFi y CCTV. Ingeniería en conectividad y redes, instalación y mantención de videovigilancia, soporte TI y domótica."
   }
   </script>
 </head>
 
-<body class="font-sans antialiased text-slate-800 bg-nc-bg">
-
+<body class="font-sans antialiased text-gray-800">
   <!-- NAV -->
-  <nav id="topnav" class="fixed w-full z-50 bg-nc-primary/90 backdrop-blur border-b border-white/10">
+  <nav class="fixed w-full bg-primary text-white shadow-lg z-50">
     <div class="container mx-auto px-6 py-3">
-      <div class="flex items-center justify-between">
+      <div class="flex justify-between items-center">
 
-        <!-- LOGO -->
+        <!-- Logo -->
         <a href="#inicio" class="flex items-center gap-3 select-none">
-          <!-- Icon NETCOM (con rama sutil) -->
-          <svg class="h-10 w-10 shrink-0" viewBox="0 0 512 512" aria-label="NETCOM">
-            <rect x="52" y="52" width="408" height="408" rx="86" ry="86" fill="#0B1F3B"/>
-            <path d="M120 305 L185 270 L255 300 L325 255 L392 285" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="120" cy="305" r="9" fill="rgba(255,255,255,0.92)"/>
-            <circle cx="185" cy="270" r="9" fill="rgba(255,255,255,0.92)"/>
-            <circle cx="255" cy="300" r="9" fill="rgba(255,255,255,0.92)"/>
-            <circle cx="325" cy="255" r="9" fill="rgba(255,255,255,0.92)"/>
-            <circle cx="392" cy="285" r="9" fill="rgba(255,255,255,0.92)"/>
-            <path d="M165 345 V175 L347 345 V175" fill="none" stroke="#00B7C2" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="165" cy="175" r="20" fill="#00B7C2"/>
-            <circle cx="165" cy="345" r="20" fill="#00B7C2"/>
-            <circle cx="347" cy="175" r="20" fill="#00B7C2"/>
-            <circle cx="347" cy="345" r="20" fill="#00B7C2"/>
-            <circle cx="256" cy="256" r="14" fill="#FFB020"/>
+          <!-- Inline SVG (simple, institucional, sin slogan) -->
+          <svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true" class="shrink-0">
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#FF6600"/>
+                <stop offset="1" stop-color="#FF8A3D"/>
+              </linearGradient>
+            </defs>
+            <rect x="6" y="6" width="52" height="52" rx="14" fill="#0A2A43"/>
+            <circle cx="22" cy="22" r="4" fill="url(#g)"/>
+            <circle cx="42" cy="18" r="4" fill="url(#g)"/>
+            <circle cx="40" cy="40" r="4" fill="url(#g)"/>
+            <circle cx="22" cy="44" r="4" fill="url(#g)"/>
+            <path d="M26 22 L38 18" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M22 26 L22 40" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M26 44 L36 40" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M40 22 L40 36" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
           </svg>
 
-          <div class="leading-none">
-            <div class="text-white font-black tracking-[.18em] text-lg">
-              <span class="text-nc-amber">NET</span><span>COM</span>
+          <div class="leading-tight">
+            <div class="text-2xl font-extrabold tracking-wide">
+              <span class="text-secondary">NET</span>COM
             </div>
-            <div class="text-white/75 text-xs font-semibold tracking-wide">
-              Redes • WiFi • CCTV • Mantención • Domótica • Seguridad
-            </div>
+            <div class="text-xs text-white/80 -mt-1">Redes • WiFi • CCTV • Soporte TI</div>
           </div>
         </a>
 
@@ -164,139 +129,97 @@
         </div>
 
         <!-- Desktop menu -->
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#inicio" class="nav-link text-white/90 hover:text-white">Inicio</a>
-          <a href="#servicios" class="nav-link text-white/90 hover:text-white">Servicios</a>
-          <a href="#proceso" class="nav-link text-white/90 hover:text-white">Cómo trabajamos</a>
-          <a href="#portafolio" class="nav-link text-white/90 hover:text-white">Portafolio</a>
-          <a href="#faq" class="nav-link text-white/90 hover:text-white">FAQ</a>
-          <a href="#contacto" class="nav-link text-white/90 hover:text-white">Contacto</a>
-
-          <a href="https://wa.me/56954293135?text=Hola%20NETCOM,%20quiero%20cotizar%20Redes/WiFi%20o%20CCTV.%20Mi%20comuna%20es:%20____%20y%20necesito:%20____"
-             target="_blank"
-             class="inline-flex items-center gap-2 bg-nc-amber text-nc-ink font-extrabold px-4 py-2 rounded-full hover:brightness-95 transition">
-            <i class="fab fa-whatsapp"></i> Cotizar
-          </a>
+        <div class="hidden md:flex space-x-8 font-medium">
+          <a href="#inicio" class="nav-link hover:text-secondary">Inicio</a>
+          <a href="#servicios" class="nav-link hover:text-secondary">Servicios</a>
+          <a href="#equipo" class="nav-link hover:text-secondary">Equipo</a>
+          <a href="#portafolio" class="nav-link hover:text-secondary">Portafolio</a>
+          <a href="#contacto" class="nav-link hover:text-secondary">Contacto</a>
         </div>
       </div>
 
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-white/10 pt-4 space-y-2">
-        <a href="#inicio" class="block py-2 text-white/90 hover:text-white">Inicio</a>
-        <a href="#servicios" class="block py-2 text-white/90 hover:text-white">Servicios</a>
-        <a href="#proceso" class="block py-2 text-white/90 hover:text-white">Cómo trabajamos</a>
-        <a href="#portafolio" class="block py-2 text-white/90 hover:text-white">Portafolio</a>
-        <a href="#faq" class="block py-2 text-white/90 hover:text-white">FAQ</a>
-        <a href="#contacto" class="block py-2 text-white/90 hover:text-white">Contacto</a>
-
-        <a href="https://wa.me/56954293135?text=Hola%20NETCOM,%20quiero%20cotizar%20Redes/WiFi%20o%20CCTV.%20Mi%20comuna%20es:%20____%20y%20necesito:%20____"
-           target="_blank"
-           class="inline-flex w-full justify-center items-center gap-2 bg-nc-amber text-nc-ink font-extrabold px-4 py-3 rounded-xl hover:brightness-95 transition">
-          <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
-        </a>
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+        <a href="#inicio" class="block py-2 hover:text-secondary">Inicio</a>
+        <a href="#servicios" class="block py-2 hover:text-secondary">Servicios</a>
+        <a href="#equipo" class="block py-2 hover:text-secondary">Equipo</a>
+        <a href="#portafolio" class="block py-2 hover:text-secondary">Portafolio</a>
+        <a href="#contacto" class="block py-2 hover:text-secondary">Contacto</a>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section id="inicio" class="hero flex items-center pt-24">
-    <div class="container mx-auto px-6">
-      <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-white/90 px-4 py-2 rounded-full mb-6">
-          <span class="h-2 w-2 rounded-full bg-nc-cyan"></span>
-          <span class="text-sm font-semibold">Atención en Biobío y alrededores</span>
+  <section id="inicio" class="hero flex items-center justify-center text-white pt-24">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
+        Redes y <span class="text-secondary">CCTV</span> con estándar profesional
+      </h1>
+      <p class="text-lg md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
+        Ingeniería en conectividad y redes + videovigilancia para condominios, empresas y proyectos residenciales.
+        Diagnóstico claro, ejecución limpia y soporte real.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contacto" class="bg-secondary hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block">
+          Cotizar ahora
+        </a>
+        <a href="https://wa.me/56954293135" target="_blank" rel="noopener"
+           class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block">
+          <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+        </a>
+      </div>
+
+      <div class="mt-10 flex flex-col md:flex-row gap-4 justify-center text-sm text-white/85">
+        <div class="px-4 py-2 rounded-full bg-white/10 border border-white/10">
+          <i class="fas fa-map-marker-alt mr-2 text-secondary"></i> Biobío y alrededores
         </div>
-
-        <h1 class="text-white text-4xl md:text-6xl font-black leading-tight">
-          Redes & <span class="text-nc-amber">CCTV</span> que funcionan de verdad
-        </h1>
-
-        <p class="text-white/85 text-lg md:text-2xl mt-5">
-          Instalación y mantención profesional: cableado ordenado, gabinetes limpios, configuración correcta y sistema mantenible.
-        </p>
-
-        <div class="mt-8 flex flex-col sm:flex-row gap-4">
-          <a href="https://wa.me/56954293135?text=Hola%20NETCOM,%20quiero%20cotizar%20Redes/WiFi%20o%20CCTV.%20Mi%20comuna%20es:%20____%20y%20necesito:%20____"
-             target="_blank"
-             class="inline-flex justify-center items-center gap-2 bg-nc-amber text-nc-ink font-extrabold py-3 px-8 rounded-2xl hover:brightness-95 transition">
-            <i class="fa-solid fa-bolt"></i> Cotizar ahora
-          </a>
-          <a href="#servicios"
-             class="inline-flex justify-center items-center gap-2 bg-white/10 text-white font-bold py-3 px-8 rounded-2xl border border-white/20 hover:bg-white/15 transition">
-            <i class="fa-solid fa-layer-group"></i> Ver servicios
-          </a>
+        <div class="px-4 py-2 rounded-full bg-white/10 border border-white/10">
+          <i class="fas fa-award mr-2 text-secondary"></i> Instalador certificado (Hikvision)
         </div>
-
-        <div class="mt-10 flex flex-wrap gap-3">
-          <span class="bg-white/10 border border-white/15 text-white/90 px-4 py-2 rounded-full text-sm font-semibold">
-            <i class="fa-solid fa-network-wired mr-2 text-nc-cyan"></i> Redes & WiFi
-          </span>
-          <span class="bg-white/10 border border-white/15 text-white/90 px-4 py-2 rounded-full text-sm font-semibold">
-            <i class="fa-solid fa-video mr-2 text-nc-cyan"></i> CCTV / NVR / DVR
-          </span>
-          <span class="bg-white/10 border border-white/15 text-white/90 px-4 py-2 rounded-full text-sm font-semibold">
-            <i class="fa-solid fa-screwdriver-wrench mr-2 text-nc-cyan"></i> Mantención & Orden
-          </span>
-          <span class="bg-white/10 border border-white/15 text-white/90 px-4 py-2 rounded-full text-sm font-semibold">
-            <i class="fa-solid fa-house-signal mr-2 text-nc-cyan"></i> Domótica & Automatización
-          </span>
-          <span class="bg-white/10 border border-white/15 text-white/90 px-4 py-2 rounded-full text-sm font-semibold">
-            <i class="fa-solid fa-certificate mr-2 text-nc-amber"></i> Técnico certificado (Hikvision)
-          </span>
+        <div class="px-4 py-2 rounded-full bg-white/10 border border-white/10">
+          <i class="fas fa-shield-halved mr-2 text-secondary"></i> Seguridad + continuidad operativa
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SOBRE -->
-  <section class="py-20 bg-nc-bg">
+  <!-- QUIENES SOMOS -->
+  <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl font-black text-nc-primary">
-            NETCOM: <span class="text-nc-cyan">infraestructura</span> bien hecha
+          <h2 class="text-3xl font-extrabold text-primary mb-6">
+            Quiénes <span class="text-secondary">Somos</span>
           </h2>
-
-          <p class="text-lg mt-6 text-slate-700">
-            Trabajamos para que tu red y tu CCTV no dependan de “milagros”. Dejamos la instalación ordenada, rotulada,
-            documentada y lista para mantención.
+          <p class="text-lg mb-5">
+            En NETCOM diseñamos, instalamos y mantenemos infraestructura tecnológica con foco en dos pilares:
+            <strong>conectividad estable</strong> y <strong>seguridad real</strong>.
+          </p>
+          <p class="text-lg mb-8">
+            Trabajamos con metodología (levantamiento, diagnóstico, plan de acción y pruebas), dejando todo documentado y ordenado:
+            cableado, gabinetes, energía, red y videovigilancia.
           </p>
 
-          <div class="mt-8 grid sm:grid-cols-2 gap-4">
-            <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
-              <div class="text-nc-primary font-extrabold text-xl">Instalación limpia</div>
-              <div class="text-slate-600 font-semibold">Canalización, gabinete y cableado ordenado</div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="p-5 bg-white rounded-xl shadow-sm border">
+              <div class="font-bold text-primary"><i class="fas fa-screwdriver-wrench text-secondary mr-2"></i>Instalación y mantención</div>
+              <div class="text-gray-600 mt-1">Preventiva y correctiva: redes, racks, CCTV y energía.</div>
             </div>
-            <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
-              <div class="text-nc-primary font-extrabold text-xl">Sistema mantenible</div>
-              <div class="text-slate-600 font-semibold">Etiquetado, respaldo y checklist de revisión</div>
+            <div class="p-5 bg-white rounded-xl shadow-sm border">
+              <div class="font-bold text-primary"><i class="fas fa-file-circle-check text-secondary mr-2"></i>Orden y documentación</div>
+              <div class="text-gray-600 mt-1">Etiquetado, diagramas, checklist y respaldo de configuración.</div>
             </div>
-          </div>
-
-          <div class="mt-8 flex flex-wrap gap-3">
-            <span class="inline-flex items-center gap-2 bg-white border border-slate-100 rounded-full px-4 py-2 font-semibold text-slate-700">
-              <span class="h-2 w-2 rounded-full bg-nc-cyan"></span> Reporte de hallazgos (si aplica)
-            </span>
-            <span class="inline-flex items-center gap-2 bg-white border border-slate-100 rounded-full px-4 py-2 font-semibold text-slate-700">
-              <span class="h-2 w-2 rounded-full bg-nc-amber"></span> Recomendaciones por prioridad
-            </span>
           </div>
         </div>
 
-        <div class="relative">
-          <div class="absolute -inset-2 bg-gradient-to-r from-nc-cyan/30 to-nc-amber/25 blur-2xl rounded-3xl"></div>
+        <div class="rounded-2xl overflow-hidden shadow-xl border bg-white">
           <img
-            src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1600&q=80"
-            alt="Infraestructura y redes"
-            class="relative rounded-3xl shadow-2xl w-full h-auto border border-white/30"
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1470&q=80"
+            alt="Profesionales trabajando en infraestructura tecnológica"
+            class="w-full h-[420px] object-cover"
             loading="lazy"
           />
-          <div class="relative mt-4 bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
-            <div class="flex items-center justify-between gap-4">
-              <div class="font-extrabold text-nc-primary">Soporte directo</div>
-              <div class="text-slate-600 font-semibold text-sm">Respuestas claras, sin vueltas</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -305,188 +228,153 @@
   <!-- SERVICIOS -->
   <section id="servicios" class="py-20 bg-white">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-black text-nc-primary">Servicios <span class="text-nc-cyan">NETCOM</span></h2>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">
-          Foco principal: <strong>Redes/WiFi</strong> y <strong>CCTV</strong>. Además: mantención, soporte y domótica.
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-extrabold text-primary mb-4">Nuestros <span class="text-secondary">Servicios</span></h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Principal foco: <strong>Redes</strong> y <strong>CCTV</strong>. Además, soporte TI y automatización para que todo quede funcionando y mantenible.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Redes -->
-        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-hover transition duration-300">
-          <div class="p-7">
-            <div class="flex items-center gap-4 mb-5">
-              <div class="bg-nc-primary rounded-2xl w-14 h-14 flex items-center justify-center">
-                <i class="fas fa-network-wired text-nc-cyan text-2xl"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-extrabold text-nc-primary">Redes & WiFi</h3>
-                <p class="text-slate-600 font-semibold">Diseño, instalación y optimización</p>
-              </div>
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover transition duration-300 border">
+          <div class="p-7 text-center">
+            <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-network-wired text-white text-3xl"></i>
             </div>
-            <ul class="text-slate-700 space-y-2 font-semibold">
-              <li>• Cableado estructurado y puntos de red</li>
-              <li>• WiFi estable (cobertura / roaming / canales)</li>
-              <li>• Switches, VLAN, orden y documentación</li>
+            <h3 class="text-xl font-extrabold text-primary mb-3">Redes y WiFi</h3>
+            <p class="text-gray-600 mb-4">Diseño, instalación y optimización de red cableada e inalámbrica.</p>
+            <ul class="text-sm text-gray-600 space-y-2 text-left">
+              <li><i class="fas fa-check text-secondary mr-2"></i>Cableado estructurado y certificación</li>
+              <li><i class="fas fa-check text-secondary mr-2"></i>Switching, VLAN, enlaces y racks</li>
+              <li><i class="fas fa-check text-secondary mr-2"></i>WiFi (cobertura, canales, potencia)</li>
             </ul>
           </div>
         </div>
 
         <!-- CCTV -->
-        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-hover transition duration-300">
-          <div class="p-7">
-            <div class="flex items-center gap-4 mb-5">
-              <div class="bg-nc-primary rounded-2xl w-14 h-14 flex items-center justify-center">
-                <i class="fas fa-video text-nc-cyan text-2xl"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-extrabold text-nc-primary">CCTV (IP / HD)</h3>
-                <p class="text-slate-600 font-semibold">Instalación y configuración</p>
-              </div>
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover transition duration-300 border">
+          <div class="p-7 text-center">
+            <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-video text-white text-3xl"></i>
             </div>
-            <ul class="text-slate-700 space-y-2 font-semibold">
-              <li>• NVR/DVR, visualización remota y permisos</li>
-              <li>• Grabación, respaldo, detección y ajustes</li>
-              <li>• Montaje, canalización y terminaciones</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Mantención CCTV -->
-        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-hover transition duration-300">
-          <div class="p-7">
-            <div class="flex items-center gap-4 mb-5">
-              <div class="bg-nc-primary rounded-2xl w-14 h-14 flex items-center justify-center">
-                <i class="fas fa-screwdriver-wrench text-nc-amber text-2xl"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-extrabold text-nc-primary">Mantención CCTV</h3>
-                <p class="text-slate-600 font-semibold">Preventiva y correctiva</p>
-              </div>
-            </div>
-            <ul class="text-slate-700 space-y-2 font-semibold">
-              <li>• Diagnóstico por tramos (energía / señal / equipo)</li>
-              <li>• Limpieza, ajustes, enfoque y pruebas</li>
-              <li>• Orden de gabinete, rotulado y PDU</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Gabinetes & Eléctrico -->
-        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-hover transition duration-300">
-          <div class="p-7">
-            <div class="flex items-center gap-4 mb-5">
-              <div class="bg-nc-primary rounded-2xl w-14 h-14 flex items-center justify-center">
-                <i class="fas fa-server text-nc-cyan text-2xl"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-extrabold text-nc-primary">Gabinetes & Orden</h3>
-                <p class="text-slate-600 font-semibold">Mantenible y seguro</p>
-              </div>
-            </div>
-            <ul class="text-slate-700 space-y-2 font-semibold">
-              <li>• PDU, fuentes dentro del rack y limpieza</li>
-              <li>• Canaletas internas y amarre correcto</li>
-              <li>• Etiquetado y mapa de puertos</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Domótica -->
-        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-hover transition duration-300">
-          <div class="p-7">
-            <div class="flex items-center gap-4 mb-5">
-              <div class="bg-nc-primary rounded-2xl w-14 h-14 flex items-center justify-center">
-                <i class="fas fa-robot text-nc-cyan text-2xl"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-extrabold text-nc-primary">Domótica & Automatización</h3>
-                <p class="text-slate-600 font-semibold">Control desde celular</p>
-              </div>
-            </div>
-            <ul class="text-slate-700 space-y-2 font-semibold">
-              <li>• Iluminación, sensores y rutinas</li>
-              <li>• Control de accesos y automatización</li>
-              <li>• Integración básica (según proyecto)</li>
+            <h3 class="text-xl font-extrabold text-primary mb-3">CCTV y Seguridad</h3>
+            <p class="text-gray-600 mb-4">Instalación, configuración y mantención de videovigilancia.</p>
+            <ul class="text-sm text-gray-600 space-y-2 text-left">
+              <li><i class="fas fa-check text-secondary mr-2"></i>NVR/DVR, grabación, acceso remoto</li>
+              <li><i class="fas fa-check text-secondary mr-2"></i>Canalización, postes, protección y orden</li>
+              <li><i class="fas fa-check text-secondary mr-2"></i>Checklist + respaldo de configuraciones</li>
             </ul>
           </div>
         </div>
 
         <!-- Soporte TI -->
-        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-hover transition duration-300">
-          <div class="p-7">
-            <div class="flex items-center gap-4 mb-5">
-              <div class="bg-nc-primary rounded-2xl w-14 h-14 flex items-center justify-center">
-                <i class="fas fa-laptop-medical text-nc-cyan text-2xl"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-extrabold text-nc-primary">Soporte TI</h3>
-                <p class="text-slate-600 font-semibold">Diagnóstico y mantención</p>
-              </div>
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover transition duration-300 border">
+          <div class="p-7 text-center">
+            <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-laptop-medical text-white text-3xl"></i>
             </div>
-            <ul class="text-slate-700 space-y-2 font-semibold">
-              <li>• Reparación / formateo / puesta a punto</li>
-              <li>• Copias de seguridad y orden</li>
-              <li>• Asesoría para compras y upgrades</li>
+            <h3 class="text-xl font-extrabold text-primary mb-3">Soporte TI</h3>
+            <p class="text-gray-600 mb-4">Diagnóstico y mantenimiento para continuidad operacional.</p>
+            <ul class="text-sm text-gray-600 space-y-2 text-left">
+              <li><i class="fas fa-check text-secondary mr-2"></i>PCs, notebooks y software</li>
+              <li><i class="fas fa-check text-secondary mr-2"></i>Backups, limpieza y performance</li>
+              <li><i class="fas fa-check text-secondary mr-2"></i>Soporte en terreno y remoto</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Domótica -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden card-hover transition duration-300 border">
+          <div class="p-7 text-center">
+            <div class="bg-primary rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-house-signal text-white text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-primary mb-3">Domótica y Automatización</h3>
+            <p class="text-gray-600 mb-4">Automatización práctica para seguridad y confort.</p>
+            <ul class="text-sm text-gray-600 space-y-2 text-left">
+              <li><i class="fas fa-check text-secondary mr-2"></i>Control de accesos y sensores</li>
+              <li><i class="fas fa-check text-secondary mr-2"></i>Iluminación, horarios, escenas</li>
+              <li><i class="fas fa-check text-secondary mr-2"></i>Integración y puesta en marcha</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="mt-12 text-center">
-        <a href="#contacto"
-           class="inline-flex items-center gap-2 bg-nc-primary text-white font-extrabold px-7 py-3 rounded-2xl hover:bg-nc-primary/95 transition">
-          <i class="fa-solid fa-clipboard-check text-nc-amber"></i> Pedir evaluación / visita técnica
-        </a>
+      <div class="mt-14 text-center">
+        <div class="inline-flex flex-col md:flex-row gap-3 items-center bg-gray-50 border rounded-2xl px-6 py-5">
+          <div class="font-bold text-primary">
+            <i class="fas fa-clipboard-check text-secondary mr-2"></i>
+            Entregables por servicio
+          </div>
+          <div class="text-gray-600 text-sm">
+            Diagnóstico • Plan de acción • Registro fotográfico • Etiquetado/orden • Pruebas finales • Recomendaciones
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- PROCESO -->
-  <section id="proceso" class="py-20 bg-nc-bg">
+  <!-- EQUIPO -->
+  <section id="equipo" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-black text-nc-primary">Cómo <span class="text-nc-cyan">trabajamos</span></h2>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">
-          Para redes y CCTV usamos un flujo que evita “parches”: diagnóstico, ejecución limpia y pruebas.
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-extrabold text-primary mb-4">Nuestro <span class="text-secondary">Equipo</span></h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Profesionales orientados a resultados: ingeniería, instalación y soporte con estándares de orden, seguridad y continuidad.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-4 gap-6">
-        <div class="bg-white rounded-3xl border border-slate-100 shadow-sm p-7">
-          <div class="text-nc-primary font-black text-3xl">01</div>
-          <h3 class="mt-2 font-extrabold text-nc-primary">Levantamiento</h3>
-          <p class="mt-2 text-slate-600 font-semibold">Revisión de puntos, gabinete, energía, señal y documentación (si existe).</p>
-        </div>
-        <div class="bg-white rounded-3xl border border-slate-100 shadow-sm p-7">
-          <div class="text-nc-primary font-black text-3xl">02</div>
-          <h3 class="mt-2 font-extrabold text-nc-primary">Diagnóstico</h3>
-          <p class="mt-2 text-slate-600 font-semibold">Aislamos falla por tramo: alimentación, cableado, conectores, equipo, configuración.</p>
-        </div>
-        <div class="bg-white rounded-3xl border border-slate-100 shadow-sm p-7">
-          <div class="text-nc-primary font-black text-3xl">03</div>
-          <h3 class="mt-2 font-extrabold text-nc-primary">Ejecución</h3>
-          <p class="mt-2 text-slate-600 font-semibold">Trabajo limpio: canalización, amarre, rotulado, orden rack/PDU, ajustes.</p>
-        </div>
-        <div class="bg-white rounded-3xl border border-slate-100 shadow-sm p-7">
-          <div class="text-nc-primary font-black text-3xl">04</div>
-          <h3 class="mt-2 font-extrabold text-nc-primary">Pruebas & Entrega</h3>
-          <p class="mt-2 text-slate-600 font-semibold">Pruebas, validación con cliente y recomendaciones por prioridad.</p>
-        </div>
-      </div>
-
-      <div class="mt-10 bg-white rounded-3xl border border-slate-100 shadow-sm p-7">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div>
-            <h3 class="font-extrabold text-nc-primary text-xl">¿Necesitas mantención correctiva de CCTV?</h3>
-            <p class="text-slate-600 font-semibold mt-1">Ideal para condominios/villas: cámaras en postes, distancias largas, gabinete desordenado, fallas múltiples.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-md p-8 border">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center">
+              <i class="fas fa-diagram-project text-white"></i>
+            </div>
+            <div>
+              <h3 class="font-extrabold text-primary">Ingenieros en Conectividad y Redes</h3>
+              <p class="text-gray-500 text-sm">Diseño • implementación • optimización</p>
+            </div>
           </div>
-          <a class="inline-flex items-center justify-center gap-2 bg-nc-amber text-nc-ink font-extrabold px-6 py-3 rounded-2xl hover:brightness-95 transition"
-             href="https://wa.me/56954293135?text=Hola%20NETCOM,%20necesito%20mantención%20CCTV%20(correctiva/preventiva).%20Lugar:%20____%20Cantidad%20de%20cámaras:%20____%20Síntoma:%20____"
-             target="_blank">
-            <i class="fab fa-whatsapp"></i> Hablemos
-          </a>
+          <ul class="text-gray-600 space-y-2">
+            <li><i class="fas fa-check text-secondary mr-2"></i>Topologías, VLAN, switching y enlaces</li>
+            <li><i class="fas fa-check text-secondary mr-2"></i>WiFi (cobertura, interferencia, ajuste fino)</li>
+            <li><i class="fas fa-check text-secondary mr-2"></i>Documentación y estandarización</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md p-8 border">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center">
+              <i class="fas fa-camera text-white"></i>
+            </div>
+            <div>
+              <h3 class="font-extrabold text-primary">Técnicos CCTV (Hikvision)</h3>
+              <p class="text-gray-500 text-sm">Instalación • configuración • mantención</p>
+            </div>
+          </div>
+          <ul class="text-gray-600 space-y-2">
+            <li><i class="fas fa-check text-secondary mr-2"></i>NVR/DVR, grabación y acceso remoto</li>
+            <li><i class="fas fa-check text-secondary mr-2"></i>Orden de gabinete, PDU, UPS y energía</li>
+            <li><i class="fas fa-check text-secondary mr-2"></i>Pruebas y recuperación por tramos</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-md p-8 border">
+          <div class="flex items-center gap-4 mb-5">
+            <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center">
+              <i class="fas fa-headset text-white"></i>
+            </div>
+            <div>
+              <h3 class="font-extrabold text-primary">Soporte TI</h3>
+              <p class="text-gray-500 text-sm">Continuidad • soporte • mejoras</p>
+            </div>
+          </div>
+          <ul class="text-gray-600 space-y-2">
+            <li><i class="fas fa-check text-secondary mr-2"></i>Diagnóstico y resolución rápida</li>
+            <li><i class="fas fa-check text-secondary mr-2"></i>Backups, actualización y mantención</li>
+            <li><i class="fas fa-check text-secondary mr-2"></i>Soporte en terreno y remoto</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -495,442 +383,358 @@
   <!-- PORTAFOLIO -->
   <section id="portafolio" class="py-20 bg-white">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-black text-nc-primary">Portafolio <span class="text-nc-cyan">real</span></h2>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">
-          Reemplaza estas imágenes por fotos tuyas (antes/después, gabinete ordenado, canalización, racks, cámaras en poste).
-        </p>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-extrabold text-primary mb-4">Nuestro <span class="text-secondary">Trabajo</span></h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Proyectos típicos que ejecutamos en terreno (redes, CCTV y orden de infraestructura).</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="portfolio-item relative rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-          <!-- Portafolio real - Proyecto redes -->
-          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=1600" alt="Proyecto redes" class="w-full h-64 object-cover" loading="lazy"/>
-          <div class="portfolio-overlay absolute inset-0 bg-nc-primary/85 flex items-center justify-center flex-col p-6">
-            <h3 class="text-white text-xl font-extrabold mb-2">Redes / WiFi</h3>
-            <p class="text-white/90 text-center">Cobertura, orden, documentación y estabilidad</p>
+        <!-- Proyecto Redes -->
+        <div class="portfolio-item relative rounded-2xl overflow-hidden shadow-lg border">
+          <img
+            src="https://images.unsplash.com/photo-1584169417032-d34e8d805e8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2209&q=80"
+            alt="Infraestructura de red y cableado"
+            class="w-full h-64 object-cover"
+            loading="lazy"
+          />
+          <div class="portfolio-overlay absolute inset-0 bg-primary bg-opacity-85 flex items-center justify-center flex-col p-6">
+            <h3 class="text-white text-xl font-extrabold mb-2">Redes y Conectividad</h3>
+            <p class="text-white/90 text-center">Cableado estructurado, racks, enlaces y WiFi optimizado.</p>
           </div>
         </div>
 
-        <div class="portfolio-item relative rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1470&q=80"
-               alt="Proyecto CCTV" class="w-full h-64 object-cover" loading="lazy">
-          <div class="portfolio-overlay absolute inset-0 bg-nc-primary/85 flex items-center justify-center flex-col p-6">
-            <h3 class="text-white text-xl font-extrabold mb-2">CCTV</h3>
-            <p class="text-white/90 text-center">Instalación, configuración y acceso remoto</p>
+        <!-- Proyecto CCTV -->
+        <div class="portfolio-item relative rounded-2xl overflow-hidden shadow-lg border">
+          <img
+            src="https://images.pexels.com/photos/24742757/pexels-photo-24742757.jpeg?cs=srgb&dl=pexels-zeng-jinwen-679366437-24742757.jpg&fm=jpg"
+            alt="Cámaras de seguridad instaladas en poste"
+            class="w-full h-64 object-cover"
+            loading="lazy"
+          />
+          <div class="portfolio-overlay absolute inset-0 bg-primary bg-opacity-85 flex items-center justify-center flex-col p-6">
+            <h3 class="text-white text-xl font-extrabold mb-2">Videovigilancia (CCTV)</h3>
+            <p class="text-white/90 text-center">Instalación y mantención. Acceso remoto, grabación y pruebas.</p>
           </div>
         </div>
 
-        <div class="portfolio-item relative rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-          <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1470&q=80"
-               alt="Gabinete ordenado" class="w-full h-64 object-cover" loading="lazy">
-          <div class="portfolio-overlay absolute inset-0 bg-nc-primary/85 flex items-center justify-center flex-col p-6">
-            <h3 class="text-white text-xl font-extrabold mb-2">Gabinete / Rack</h3>
-            <p class="text-white/90 text-center">Orden, PDU, limpieza y rotulado</p>
+        <!-- Proyecto Rack/Orden -->
+        <div class="portfolio-item relative rounded-2xl overflow-hidden shadow-lg border">
+          <img
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2234&q=80"
+            alt="Rack y gabinete ordenado con infraestructura"
+            class="w-full h-64 object-cover"
+            loading="lazy"
+          />
+          <div class="portfolio-overlay absolute inset-0 bg-primary bg-opacity-85 flex items-center justify-center flex-col p-6">
+            <h3 class="text-white text-xl font-extrabold mb-2">Orden de Gabinete</h3>
+            <p class="text-white/90 text-center">PDU/UPS, canalización, etiquetado y limpieza para continuidad.</p>
           </div>
         </div>
-      </div>
-
-      <div class="mt-10 text-center">
-        <p class="text-slate-600 font-semibold">Tip: 6 fotos tuyas bien tomadas convierten más que 30 stock.</p>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIOS (sin inventar: placeholders reales para que los completes) -->
-  <section class="py-20 bg-nc-bg">
+  <!-- TESTIMONIOS -->
+  <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-black text-nc-primary">Comentarios <span class="text-nc-cyan">de clientes</span></h2>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">
-          Completa con testimonios reales (nombre/empresa o “Cliente verificado”).
-        </p>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-extrabold text-primary mb-4">Lo que <span class="text-secondary">valoran</span> nuestros clientes</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Comentarios habituales después de redes, CCTV y mantenciones.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+        <div class="bg-white p-8 rounded-2xl shadow-md border">
           <div class="flex items-center mb-4">
-            <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center text-white font-extrabold mr-4">CL</div>
+            <div class="bg-secondary rounded-full w-12 h-12 flex items-center justify-center text-white font-bold mr-4">AD</div>
             <div>
-              <h4 class="font-extrabold text-nc-primary">Cliente (Completar)</h4>
-              <p class="text-slate-500 text-sm">Condominio / Empresa</p>
+              <h4 class="font-extrabold text-primary">Administración de Condominio</h4>
+              <p class="text-gray-500 text-sm">Condominio</p>
             </div>
           </div>
-          <p class="text-slate-700 font-semibold">“Trabajo limpio y ordenado. Dejaron el gabinete rotulado y el sistema estable.”</p>
-          <div class="flex mt-4 text-nc-amber">
+          <p class="text-gray-600">“Se recuperó el sistema de cámaras y además quedó el gabinete ordenado, con energía bien armada y todo etiquetado. Ahora es mantenible.”</p>
+          <div class="flex mt-4 text-yellow-400" aria-label="5 estrellas">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
         </div>
 
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+        <div class="bg-white p-8 rounded-2xl shadow-md border">
           <div class="flex items-center mb-4">
-            <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center text-white font-extrabold mr-4">CL</div>
+            <div class="bg-secondary rounded-full w-12 h-12 flex items-center justify-center text-white font-bold mr-4">PY</div>
             <div>
-              <h4 class="font-extrabold text-nc-primary">Cliente (Completar)</h4>
-              <p class="text-slate-500 text-sm">Local / Pyme</p>
+              <h4 class="font-extrabold text-primary">Encargado de Operaciones</h4>
+              <p class="text-gray-500 text-sm">Empresa</p>
             </div>
           </div>
-          <p class="text-slate-700 font-semibold">“WiFi quedó impecable. Ahora tenemos señal donde antes no llegaba.”</p>
-          <div class="flex mt-4 text-nc-amber">
+          <p class="text-gray-600">“La red quedó estable y el WiFi mejoró muchísimo. Se nota el enfoque profesional: pruebas, documentación y orden.”</p>
+          <div class="flex mt-4 text-yellow-400" aria-label="5 estrellas">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
         </div>
 
-        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+        <div class="bg-white p-8 rounded-2xl shadow-md border">
           <div class="flex items-center mb-4">
-            <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center text-white font-extrabold mr-4">CL</div>
+            <div class="bg-secondary rounded-full w-12 h-12 flex items-center justify-center text-white font-bold mr-4">ED</div>
             <div>
-              <h4 class="font-extrabold text-nc-primary">Cliente (Completar)</h4>
-              <p class="text-slate-500 text-sm">Hogar</p>
+              <h4 class="font-extrabold text-primary">Coordinación TI</h4>
+              <p class="text-gray-500 text-sm">Institución</p>
             </div>
           </div>
-          <p class="text-slate-700 font-semibold">“CCTV funcionando y con acceso en el celular. Explicación clara y rápida.”</p>
-          <div class="flex mt-4 text-nc-amber">
+          <p class="text-gray-600">“Buena comunicación y tiempos claros. Lo más importante: dejaron todo funcionando y con respaldo de configuración.”</p>
+          <div class="flex mt-4 text-yellow-400" aria-label="4.5 estrellas">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-black text-nc-primary">Preguntas <span class="text-nc-cyan">frecuentes</span></h2>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">
-          Respuestas directas para redes y CCTV.
-        </p>
-      </div>
-
-      <div class="max-w-3xl mx-auto space-y-4">
-        <button class="faq-btn w-full text-left bg-nc-bg border border-slate-100 rounded-2xl p-6 font-extrabold text-nc-primary flex items-center justify-between">
-          <span>¿Hacen mantención correctiva cuando no se sabe la causa?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-panel hidden bg-white border border-slate-100 rounded-2xl p-6 text-slate-700 font-semibold">
-          Sí. Trabajamos por tramos (energía / señal / equipo / configuración) y documentamos hallazgos. Si hay “peor escenario” (cableado dañado, fuentes fuera de estándar, conectores malos), se cotiza por ítems y prioridad.
-        </div>
-
-        <button class="faq-btn w-full text-left bg-nc-bg border border-slate-100 rounded-2xl p-6 font-extrabold text-nc-primary flex items-center justify-between">
-          <span>¿Incluyen orden de gabinete, PDU y rotulado?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-panel hidden bg-white border border-slate-100 rounded-2xl p-6 text-slate-700 font-semibold">
-          Sí. Si el proyecto lo requiere: limpieza, reubicación de fuentes, instalación de PDU, amarre, rotulado y mapa de puertos para que la mantención sea rápida.
-        </div>
-
-        <button class="faq-btn w-full text-left bg-nc-bg border border-slate-100 rounded-2xl p-6 font-extrabold text-nc-primary flex items-center justify-between">
-          <span>¿Qué necesitan para cotizar redes o CCTV?</span>
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-        <div class="faq-panel hidden bg-white border border-slate-100 rounded-2xl p-6 text-slate-700 font-semibold">
-          Comuna, tipo de lugar (condominio/empresa/hogar), cantidad aproximada de puntos o cámaras, y si ya existe infraestructura (canalización, gabinete, switch, NVR/DVR).
-        </div>
-      </div>
+      <p class="text-center text-xs text-gray-500 mt-8">
+        * Si quieres, me pasas 3 testimonios reales (nombre/empresa o “Cliente”) y te los dejo idénticos pero reales al 100%.
+      </p>
     </div>
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="py-20 bg-nc-primary text-white">
+  <section id="contacto" class="py-20 bg-primary text-white">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-14">
-        <h2 class="text-3xl font-black">Contácta<span class="text-nc-amber">nos</span></h2>
-        <p class="text-lg max-w-2xl mx-auto mt-3 text-white/85">
-          Cuéntanos lo que necesitas y te respondemos con una propuesta clara.
-        </p>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-extrabold mb-4">Contácta<span class="text-secondary">nos</span></h2>
+        <p class="text-lg max-w-2xl mx-auto">Cuéntanos tu necesidad y te respondemos con un plan claro (y cotización aterrizada).</p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-10">
-        <!-- Info -->
-        <div class="space-y-6">
-          <div class="bg-white/10 border border-white/15 rounded-3xl p-7">
-            <h3 class="text-xl font-extrabold mb-4">Información de contacto</h3>
+      <div class="flex flex-col md:flex-row gap-10">
+        <div class="md:w-1/2 md:pr-8">
+          <h3 class="text-xl font-extrabold mb-6">Información de Contacto</h3>
 
-            <div class="flex items-start mb-5">
-              <div class="bg-nc-amber rounded-2xl w-10 h-10 flex items-center justify-center mr-4 mt-1 text-nc-ink">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div>
-                <h4 class="font-extrabold">Ubicación</h4>
-                <p class="text-white/85">Penco / Concepción, Chile</p>
-              </div>
+          <div class="flex items-start mb-6">
+            <div class="bg-secondary rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+              <i class="fas fa-map-marker-alt text-white"></i>
             </div>
-
-            <div class="flex items-start mb-5">
-              <div class="bg-nc-amber rounded-2xl w-10 h-10 flex items-center justify-center mr-4 mt-1 text-nc-ink">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div>
-                <h4 class="font-extrabold">Teléfono</h4>
-                <p class="text-white/85">
-                  <a class="underline decoration-white/30 hover:decoration-white" href="tel:+56954293135">+56 9 5429 3135</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start mb-5">
-              <div class="bg-nc-amber rounded-2xl w-10 h-10 flex items-center justify-center mr-4 mt-1 text-nc-ink">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div>
-                <h4 class="font-extrabold">Email</h4>
-                <p class="text-white/85">
-                  <a class="underline decoration-white/30 hover:decoration-white" href="mailto:netcom.ti.cl@gmail.com">netcom.ti.cl@gmail.com</a>
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <div class="bg-nc-amber rounded-2xl w-10 h-10 flex items-center justify-center mr-4 mt-1 text-nc-ink">
-                <i class="fas fa-clock"></i>
-              </div>
-              <div>
-                <h4 class="font-extrabold">Horario</h4>
-                <p class="text-white/85">Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
-              </div>
+            <div>
+              <h4 class="font-bold">Ubicación</h4>
+              <p>Penco / Concepción, Chile</p>
             </div>
           </div>
 
-          <a href="https://wa.me/56954293135?text=Hola%20NETCOM,%20quiero%20cotizar%20Redes/WiFi%20o%20CCTV.%20Mi%20comuna%20es:%20____%20y%20necesito:%20____"
-             target="_blank"
-             class="w-full inline-flex items-center justify-center gap-2 bg-green-500 text-white font-extrabold py-4 rounded-2xl hover:brightness-95 transition">
-            <i class="fab fa-whatsapp text-xl"></i> Hablar por WhatsApp ahora
-          </a>
+          <div class="flex items-start mb-6">
+            <div class="bg-secondary rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+              <i class="fas fa-phone-alt text-white"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Teléfono</h4>
+              <p><a class="underline hover:text-white/90" href="tel:+56954293135">+56 9 5429 3135</a></p>
+            </div>
+          </div>
+
+          <div class="flex items-start mb-6">
+            <div class="bg-secondary rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+              <i class="fas fa-envelope text-white"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Email</h4>
+              <p><a class="underline hover:text-white/90" href="mailto:netcom.ti.cl@gmail.com">netcom.ti.cl@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="bg-secondary rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1">
+              <i class="fas fa-clock text-white"></i>
+            </div>
+            <div>
+              <h4 class="font-bold">Horario</h4>
+              <p>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 10:00 - 14:00</p>
+            </div>
+          </div>
+
+          <div class="mt-8 p-5 bg-white/10 border border-white/10 rounded-2xl">
+            <div class="font-bold mb-2"><i class="fas fa-bolt text-secondary mr-2"></i>Respuesta rápida</div>
+            <div class="text-white/85 text-sm">
+              Para emergencias de CCTV/red, escríbenos por WhatsApp con: ubicación, cantidad de puntos/cámaras y fotos del gabinete.
+            </div>
+          </div>
         </div>
 
-        <!-- Form (Netlify) -->
-        <form class="bg-white rounded-3xl shadow-2xl p-8 text-slate-800 border border-white/50"
-              name="contacto"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-              action="/gracias.html">
-          <input type="hidden" name="form-name" value="contacto" />
-          <p class="hidden">
-            <label>No llenar: <input name="bot-field" /></label>
-          </p>
+        <div class="md:w-1/2">
+          <!-- Netlify form -->
+          <form class="bg-white rounded-2xl shadow-xl p-8 text-gray-800"
+            name="contacto"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/gracias.html">
+            <input type="hidden" name="form-name" value="contacto" />
+            <p class="hidden">
+              <label>No llenar: <input name="bot-field" /></label>
+            </p>
 
-          <div class="mb-5">
-            <label for="nombre" class="block text-slate-700 font-extrabold mb-2">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre"
-                   class="w-full px-4 py-3 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-nc-cyan"
-                   required>
-          </div>
+            <div class="mb-6">
+              <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre</label>
+              <input type="text" id="nombre" name="nombre"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary" required>
+            </div>
 
-          <div class="mb-5">
-            <label for="email" class="block text-slate-700 font-extrabold mb-2">Correo</label>
-            <input type="email" id="email" name="email"
-                   class="w-full px-4 py-3 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-nc-cyan"
-                   required>
-          </div>
+            <div class="mb-6">
+              <label for="email" class="block text-gray-700 font-bold mb-2">Correo</label>
+              <input type="email" id="email" name="email"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary" required>
+            </div>
 
-          <div class="grid sm:grid-cols-2 gap-4 mb-5">
-            <div>
-              <label for="telefono" class="block text-slate-700 font-extrabold mb-2">Teléfono</label>
+            <div class="mb-6">
+              <label for="telefono" class="block text-gray-700 font-bold mb-2">Teléfono</label>
               <input type="tel" id="telefono" name="telefono"
-                     class="w-full px-4 py-3 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-nc-cyan">
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
             </div>
-            <div>
-              <label for="comuna" class="block text-slate-700 font-extrabold mb-2">Comuna</label>
-              <input type="text" id="comuna" name="comuna"
-                     class="w-full px-4 py-3 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-nc-cyan"
-                     placeholder="Ej: Concepción">
-            </div>
-          </div>
 
-          <div class="grid sm:grid-cols-2 gap-4 mb-5">
-            <div>
-              <label for="servicio" class="block text-slate-700 font-extrabold mb-2">Servicio</label>
+            <div class="mb-6">
+              <label for="servicio" class="block text-gray-700 font-bold mb-2">Servicio</label>
               <select id="servicio" name="servicio"
-                      class="w-full px-4 py-3 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-nc-cyan">
-                <option value="">Seleccione</option>
-                <option value="redes">Redes / WiFi</option>
-                <option value="cctv">CCTV</option>
-                <option value="mantencion_cctv">Mantención CCTV</option>
-                <option value="gabinete">Gabinete / Orden / PDU</option>
-                <option value="domotica">Domótica / Automatización</option>
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                <option value="">Seleccione un servicio</option>
+                <option value="redes">Redes y WiFi</option>
+                <option value="cctv">CCTV y Seguridad</option>
                 <option value="soporte">Soporte TI</option>
+                <option value="domotica">Domótica y Automatización</option>
                 <option value="otro">Otro</option>
               </select>
             </div>
-            <div>
-              <label for="urgencia" class="block text-slate-700 font-extrabold mb-2">Urgencia</label>
-              <select id="urgencia" name="urgencia"
-                      class="w-full px-4 py-3 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-nc-cyan">
-                <option value="">Seleccione</option>
-                <option value="hoy">Hoy</option>
-                <option value="esta_semana">Esta semana</option>
-                <option value="este_mes">Este mes</option>
-                <option value="sin_urgencia">Sin urgencia</option>
-              </select>
+
+            <div class="mb-6">
+              <label for="mensaje" class="block text-gray-700 font-bold mb-2">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"
+                placeholder="Ej: 15 cámaras sin señal, distancia aprox 200 m al DVR, gabinete desordenado, se requiere mantención correctiva y preventiva..."
+                required></textarea>
             </div>
-          </div>
 
-          <div class="mb-6">
-            <label for="mensaje" class="block text-slate-700 font-extrabold mb-2">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="5"
-                      class="w-full px-4 py-3 border rounded-2xl focus:outline-none focus:ring-2 focus:ring-nc-cyan"
-                      placeholder="Ej: 15 cámaras en postes dejaron de funcionar, gabinete desordenado, distancia 200m, necesito diagnóstico y puesta en marcha…"
-                      required></textarea>
-          </div>
+            <button type="submit"
+              class="w-full bg-secondary hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+              Enviar Mensaje
+            </button>
 
-          <button type="submit"
-                  class="w-full bg-nc-primary text-white font-extrabold py-4 rounded-2xl hover:bg-nc-primary/95 transition flex items-center justify-center gap-2">
-            <i class="fa-solid fa-paper-plane text-nc-amber"></i> Enviar mensaje
-          </button>
-
-          <p class="mt-4 text-sm text-slate-500">
-            Al enviar, aceptas que te contactemos por correo o teléfono para responder tu solicitud.
-          </p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- POLÍTICA / TÉRMINOS (en la misma página para que no queden links rotos) -->
-  <section id="legal" class="py-16 bg-[#071429] text-white">
-    <div class="container mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white/5 border border-white/10 rounded-3xl p-7">
-          <h3 class="text-xl font-extrabold mb-3">Política de Privacidad</h3>
-          <p class="text-white/75 font-semibold">
-            Usamos los datos del formulario solo para responder tu solicitud (nombre, contacto, comuna y mensaje).
-            No vendemos ni compartimos tu información con terceros.
-          </p>
-        </div>
-        <div class="bg-white/5 border border-white/10 rounded-3xl p-7">
-          <h3 class="text-xl font-extrabold mb-3">Términos</h3>
-          <p class="text-white/75 font-semibold">
-            Las cotizaciones pueden variar según levantamiento en terreno, estado de la infraestructura y disponibilidad de materiales.
-            Los trabajos se ejecutan según alcance acordado por escrito.
-          </p>
+            <p class="text-xs text-gray-500 mt-4">
+              Al enviar, aceptas ser contactado por NETCOM para responder tu solicitud.
+            </p>
+          </form>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-[#050F1F] text-white py-12">
+  <footer class="bg-gray-900 text-white py-12">
     <div class="container mx-auto px-6">
-      <div class="grid md:grid-cols-4 gap-10">
-        <div class="md:col-span-2">
+      <div class="flex flex-col md:flex-row justify-between gap-10">
+        <div>
           <div class="flex items-center gap-3">
-            <svg class="h-9 w-9 shrink-0" viewBox="0 0 512 512" aria-hidden="true">
-              <rect x="52" y="52" width="408" height="408" rx="86" ry="86" fill="#0B1F3B"/>
-              <path d="M165 345 V175 L347 345 V175" fill="none" stroke="#00B7C2" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="165" cy="175" r="20" fill="#00B7C2"/>
-              <circle cx="165" cy="345" r="20" fill="#00B7C2"/>
-              <circle cx="347" cy="175" r="20" fill="#00B7C2"/>
-              <circle cx="347" cy="345" r="20" fill="#00B7C2"/>
-              <circle cx="256" cy="256" r="14" fill="#FFB020"/>
+            <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true" class="shrink-0">
+              <defs>
+                <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#FF6600"/>
+                  <stop offset="1" stop-color="#FF8A3D"/>
+                </linearGradient>
+              </defs>
+              <rect x="6" y="6" width="52" height="52" rx="14" fill="#0A2A43"/>
+              <circle cx="22" cy="22" r="4" fill="url(#g2)"/>
+              <circle cx="42" cy="18" r="4" fill="url(#g2)"/>
+              <circle cx="40" cy="40" r="4" fill="url(#g2)"/>
+              <circle cx="22" cy="44" r="4" fill="url(#g2)"/>
+              <path d="M26 22 L38 18" stroke="url(#g2)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M22 26 L22 40" stroke="url(#g2)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M26 44 L36 40" stroke="url(#g2)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M40 22 L40 36" stroke="url(#g2)" stroke-width="3" stroke-linecap="round"/>
             </svg>
-            <div class="text-2xl font-black tracking-[.18em]">
-              <span class="text-nc-amber">NET</span>COM
+            <div class="text-2xl font-extrabold">
+              <span class="text-secondary">NET</span>COM
             </div>
           </div>
 
-          <p class="mt-4 max-w-lg text-white/75 font-semibold">
-            Redes • WiFi • CCTV • Mantención • Domótica • Seguridad. Instalaciones limpias, documentadas y mantenibles.
+          <p class="mt-4 max-w-sm text-white/75">
+            Redes, WiFi y CCTV con foco en orden, continuidad y seguridad.
           </p>
 
           <div class="flex mt-6 space-x-4">
-            <a href="#" class="text-white/80 hover:text-nc-amber transition" aria-label="Facebook"><i class="fab fa-facebook-f text-xl"></i></a>
-            <a href="#" class="text-white/80 hover:text-nc-amber transition" aria-label="Instagram"><i class="fab fa-instagram text-xl"></i></a>
-            <a href="#" class="text-white/80 hover:text-nc-amber transition" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-xl"></i></a>
+            <a href="https://wa.me/56954293135" target="_blank" rel="noopener" class="text-white hover:text-secondary transition duration-300" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp text-xl"></i>
+            </a>
+            <a href="mailto:netcom.ti.cl@gmail.com" class="text-white hover:text-secondary transition duration-300" aria-label="Email">
+              <i class="fas fa-envelope text-xl"></i>
+            </a>
+            <a href="tel:+56954293135" class="text-white hover:text-secondary transition duration-300" aria-label="Teléfono">
+              <i class="fas fa-phone text-xl"></i>
+            </a>
           </div>
         </div>
 
         <div>
-          <h3 class="text-lg font-extrabold mb-4">Enlaces</h3>
-          <ul class="space-y-2 text-white/75 font-semibold">
-            <li><a href="#inicio" class="hover:text-nc-amber transition">Inicio</a></li>
-            <li><a href="#servicios" class="hover:text-nc-amber transition">Servicios</a></li>
-            <li><a href="#proceso" class="hover:text-nc-amber transition">Cómo trabajamos</a></li>
-            <li><a href="#faq" class="hover:text-nc-amber transition">FAQ</a></li>
-            <li><a href="#legal" class="hover:text-nc-amber transition">Privacidad / Términos</a></li>
+          <h3 class="text-xl font-extrabold mb-4">Enlaces</h3>
+          <ul class="space-y-2 text-white/80">
+            <li><a href="#inicio" class="hover:text-secondary transition duration-300">Inicio</a></li>
+            <li><a href="#servicios" class="hover:text-secondary transition duration-300">Servicios</a></li>
+            <li><a href="#equipo" class="hover:text-secondary transition duration-300">Equipo</a></li>
+            <li><a href="#portafolio" class="hover:text-secondary transition duration-300">Portafolio</a></li>
+            <li><a href="#contacto" class="hover:text-secondary transition duration-300">Contacto</a></li>
           </ul>
         </div>
 
         <div>
-          <h3 class="text-lg font-extrabold mb-4">Contacto</h3>
-          <ul class="space-y-2 text-white/75 font-semibold">
-            <li><i class="fa-solid fa-phone mr-2 text-nc-cyan"></i> <a href="tel:+56954293135" class="hover:text-nc-amber transition">+56 9 5429 3135</a></li>
-            <li><i class="fa-solid fa-envelope mr-2 text-nc-cyan"></i> <a href="mailto:netcom.ti.cl@gmail.com" class="hover:text-nc-amber transition">netcom.ti.cl@gmail.com</a></li>
-            <li><i class="fa-solid fa-globe mr-2 text-nc-cyan"></i> <a href="https://netcom.cl/" class="hover:text-nc-amber transition">netcom.cl</a></li>
+          <h3 class="text-xl font-extrabold mb-4">Contacto</h3>
+          <ul class="space-y-2 text-white/80">
+            <li><i class="fas fa-location-dot text-secondary mr-2"></i>Biobío, Chile</li>
+            <li><i class="fas fa-phone text-secondary mr-2"></i><a class="hover:text-secondary" href="tel:+56954293135">+56 9 5429 3135</a></li>
+            <li><i class="fas fa-envelope text-secondary mr-2"></i><a class="hover:text-secondary" href="mailto:netcom.ti.cl@gmail.com">netcom.ti.cl@gmail.com</a></li>
+            <li><i class="fas fa-globe text-secondary mr-2"></i><a class="hover:text-secondary" href="https://netcom.cl">netcom.cl</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="border-t border-white/10 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
-        <p class="text-white/60 font-semibold">&copy; <span id="year"></span> NETCOM. Todos los derechos reservados.</p>
-        <div class="text-white/60 font-semibold">
-          <a href="#legal" class="hover:text-nc-amber transition mr-4">Política de Privacidad</a>
-          <a href="#legal" class="hover:text-nc-amber transition">Términos</a>
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
+        <p class="text-white/70">&copy; 2025 NETCOM. Todos los derechos reservados.</p>
+        <div class="text-white/60 text-sm">
+          Redes • CCTV • Soporte TI • Domótica
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Botón WhatsApp -->
-  <a href="https://wa.me/56954293135?text=Hola%20NETCOM,%20quiero%20cotizar%20Redes/WiFi%20o%20CCTV.%20Mi%20comuna%20es:%20____%20y%20necesito:%20____"
-     target="_blank"
-     class="fixed bottom-8 right-8 bg-green-500 text-white rounded-full p-4 shadow-xl whatsapp-btn transition z-50"
-     aria-label="WhatsApp NETCOM">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/56954293135" target="_blank" rel="noopener"
+     class="fixed bottom-8 right-8 bg-green-500 text-white rounded-full p-4 shadow-xl whatsapp-btn transition duration-300 z-50"
+     aria-label="Escribir por WhatsApp">
     <i class="fab fa-whatsapp text-3xl"></i>
   </a>
 
   <!-- Scripts -->
   <script>
-    // Año automático
-    document.getElementById('year').textContent = new Date().getFullYear();
-
     // Menú móvil
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
 
     // Scroll suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
-        const target = document.querySelector(targetId);
-        if (!target) return;
+      anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        window.scrollTo({ top: target.offsetTop - 84, behavior: 'smooth' });
-        mobileMenu?.classList.add('hidden');
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          mobileMenu.classList.add('hidden');
+        }
       });
     });
 
-    // FAQ accordion
-    const faqBtns = document.querySelectorAll('.faq-btn');
-    faqBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const panel = btn.nextElementSibling;
-        const icon = btn.querySelector('i');
-        if (!panel) return;
-        panel.classList.toggle('hidden');
-        icon?.classList.toggle('fa-chevron-down');
-        icon?.classList.toggle('fa-chevron-up');
-      });
-    });
-
-    // Sombra nav al hacer scroll
-    const nav = document.getElementById('topnav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 30) nav.classList.add('shadow-xl');
+    // Shadow navbar
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) nav.classList.add('shadow-xl');
       else nav.classList.remove('shadow-xl');
     });
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
