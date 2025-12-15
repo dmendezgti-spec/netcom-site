@@ -7,12 +7,12 @@
   <title>NETCOM - Soluciones Tecnológicas Integrales</title>
   <link rel="canonical" href="https://netcom.cl" />
 
-  <meta name="description" content="CCTV, redes, conectividad, soporte TI, domótica y seguridad. Soluciones tecnológicas confiables para tu negocio o hogar en Biobío y alrededores.">
-  <meta name="keywords" content="CCTV, cámaras seguridad, redes, conectividad, soporte TI, domótica, automatización, infraestructura, mantenimiento, instalación, Biobío">
+  <meta name="description" content="CCTV, redes, conectividad, soporte TI y seguridad. Soluciones tecnológicas confiables para tu negocio o hogar en Biobío y alrededores.">
+  <meta name="keywords" content="CCTV, cámaras seguridad, redes, conectividad, soporte TI, seguridad, mantenimiento, instalación, Biobío">
 
   <!-- Open Graph -->
   <meta property="og:title" content="NETCOM - Soluciones Tecnológicas Integrales" />
-  <meta property="og:description" content="CCTV, redes, conectividad, soporte TI, domótica e infraestructura. Atención en Biobío y alrededores." />
+  <meta property="og:description" content="CCTV, redes, conectividad, soporte TI y seguridad. Atención en Biobío y alrededores." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://netcom.cl" />
   <meta property="og:image" content="https://netcom.cl/og-image.jpg" />
@@ -33,11 +33,11 @@
         extend: {
           colors: {
             nc: {
-              primary: '#0B1F3B',   // institucional
-              cyan: '#00B7C2',      // acento
-              amber: '#FFB020',     // acento 2
-              bg: '#F6F8FB',        // fondo
-              ink: '#0B0F18'        // texto oscuro
+              primary: '#0B1F3B',
+              cyan: '#00B7C2',
+              amber: '#FFB020',
+              bg: '#F6F8FB',
+              ink: '#0B0F18'
             }
           },
           fontFamily: {
@@ -56,24 +56,16 @@
       --nc-bg:#F6F8FB;
     }
 
-    /* HERO (datacenter pro) */
+    /* HERO: cambiado a data center pro (servidores/racks con luces) */
     .hero {
       background:
-        radial-gradient(900px 520px at 18% 18%, rgba(0,183,194,.22), transparent 55%),
-        radial-gradient(780px 460px at 85% 35%, rgba(255,176,32,.16), transparent 60%),
-        linear-gradient(rgba(11,31,59,.86), rgba(11,31,59,.90)),
-        url('https://images.pexels.com/photos/5480781/pexels-photo-5480781.jpeg?cs=srgb&dl=pexels-meo-5480781.jpg&fm=jpg&v=3');
+        radial-gradient(900px 480px at 20% 20%, rgba(0,183,194,.18), transparent 55%),
+        radial-gradient(700px 420px at 85% 35%, rgba(255,176,32,.14), transparent 60%),
+        linear-gradient(rgba(11,31,59,.88), rgba(11,31,59,.88)),
+        url('https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?cs=srgb&dl=pexels-pixabay-325229.jpg&fm=jpg');
       background-size: cover;
       background-position: center;
       min-height: 92vh;
-    }
-
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background: linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.06));
-      pointer-events:none;
     }
 
     .card-hover:hover { transform: translateY(-8px); box-shadow: 0 12px 28px rgba(0,0,0,0.18); }
@@ -99,9 +91,6 @@
       70% { box-shadow:0 0 0 16px rgba(37,211,102,0); }
       100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
     }
-    @media (prefers-reduced-motion: reduce) {
-      .whatsapp-btn { animation: none; }
-    }
   </style>
 </head>
 
@@ -112,18 +101,17 @@
     <div class="container mx-auto px-6 py-3">
       <div class="flex items-center justify-between">
 
-        <!-- LOGO (inline SVG: icon + wordmark) -->
+        <!-- LOGO -->
         <a href="#inicio" class="flex items-center gap-3 select-none">
           <svg class="h-10 w-10 shrink-0" viewBox="0 0 512 512" aria-label="NETCOM">
             <rect x="52" y="52" width="408" height="408" rx="86" ry="86" fill="#0B1F3B"/>
-            <!-- rama/red -->
             <path d="M120 305 L185 270 L255 300 L325 255 L392 285" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
             <circle cx="120" cy="305" r="9" fill="rgba(255,255,255,0.92)"/>
             <circle cx="185" cy="270" r="9" fill="rgba(255,255,255,0.92)"/>
             <circle cx="255" cy="300" r="9" fill="rgba(255,255,255,0.92)"/>
             <circle cx="325" cy="255" r="9" fill="rgba(255,255,255,0.92)"/>
             <circle cx="392" cy="285" r="9" fill="rgba(255,255,255,0.92)"/>
-            <!-- N -->
+
             <path d="M165 345 V175 L347 345 V175" fill="none" stroke="#00B7C2" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
             <circle cx="165" cy="175" r="20" fill="#00B7C2"/>
             <circle cx="165" cy="345" r="20" fill="#00B7C2"/>
@@ -178,8 +166,8 @@
   </nav>
 
   <!-- HERO -->
-  <section id="inicio" class="hero relative flex items-center pt-24">
-    <div class="container mx-auto px-6 relative">
+  <section id="inicio" class="hero flex items-center pt-24">
+    <div class="container mx-auto px-6">
       <div class="max-w-3xl">
         <div class="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-white/90 px-4 py-2 rounded-full mb-6">
           <span class="h-2 w-2 rounded-full bg-nc-cyan"></span>
@@ -187,7 +175,7 @@
         </div>
 
         <h1 class="text-white text-4xl md:text-6xl font-black leading-tight">
-          Redes y <span class="text-nc-amber">CCTV</span> listos para operar
+          Redes y CCTV <span class="text-nc-amber">listos para operar</span>
         </h1>
 
         <p class="text-white/85 text-lg md:text-2xl mt-5">
@@ -216,7 +204,7 @@
             <i class="fa-solid fa-server mr-2 text-nc-cyan"></i> Racks & Gabinetes
           </span>
           <span class="bg-white/10 border border-white/15 text-white/90 px-4 py-2 rounded-full text-sm font-semibold">
-            <i class="fa-solid fa-user-gear mr-2 text-nc-amber"></i> Ingenieros en Conectividad y Redes
+            <i class="fa-solid fa-user-gear mr-2 text-nc-cyan"></i> Ingenieros en Conectividad y Redes
           </span>
           <span class="bg-white/10 border border-white/15 text-white/90 px-4 py-2 rounded-full text-sm font-semibold">
             <i class="fa-solid fa-certificate mr-2 text-nc-amber"></i> Técnico certificado Hikvision
@@ -226,7 +214,7 @@
     </div>
   </section>
 
-  <!-- SOBRE NOSOTROS -->
+  <!-- QUIÉNES SOMOS -->
   <section class="py-20 bg-nc-bg">
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -256,10 +244,11 @@
 
         <div class="relative">
           <div class="absolute -inset-2 bg-gradient-to-r from-nc-cyan/30 to-nc-amber/25 blur-2xl rounded-3xl"></div>
-          <!-- FIX: imagen pro (servidores/rack) -->
+
+          <!-- CAMBIADA: antes estaba la foto “pepino/cocina” -->
           <img
-            src="https://images.pexels.com/photos/17323801/pexels-photo-17323801.jpeg?cs=srgb&dl=pexels-cookiecutter-17323801.jpg&fm=jpg&v=2"
-            alt="Infraestructura en rack y conectividad"
+            src="https://images.pexels.com/photos/5480781/pexels-photo-5480781.jpeg?cs=srgb&dl=pexels-brett-sayles-5480781.jpg&fm=jpg"
+            alt="Trabajo en rack y conectividad"
             class="relative rounded-3xl shadow-2xl w-full h-auto border border-white/30"
             loading="lazy"
           />
@@ -279,39 +268,45 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-nc-bg rounded-3xl p-8 border border-slate-100 shadow-sm card-hover transition duration-300">
-          <div class="bg-nc-primary rounded-2xl w-14 h-14 flex items-center justify-center mb-5">
-            <i class="fa-solid fa-diagram-project text-nc-cyan text-2xl"></i>
+        <div class="bg-nc-bg p-8 rounded-3xl border border-slate-100 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center text-white">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-nc-primary">Ingeniería en Conectividad & Redes</h3>
           </div>
-          <h3 class="text-xl font-extrabold text-nc-primary">Ingeniería en Conectividad & Redes</h3>
-          <ul class="mt-4 space-y-2 text-slate-700 font-medium">
-            <li><i class="fa-solid fa-check text-nc-cyan mr-2"></i> Diseño y optimización de red</li>
-            <li><i class="fa-solid fa-check text-nc-cyan mr-2"></i> Segmentación / buenas prácticas</li>
-            <li><i class="fa-solid fa-check text-nc-cyan mr-2"></i> Documentación y pruebas</li>
+          <ul class="space-y-2 text-slate-700 font-semibold">
+            <li>• Diseño y optimización de red</li>
+            <li>• Segmentación / buenas prácticas</li>
+            <li>• Documentación y pruebas</li>
           </ul>
         </div>
 
-        <div class="bg-nc-bg rounded-3xl p-8 border border-slate-100 shadow-sm card-hover transition duration-300">
-          <div class="bg-nc-primary rounded-2xl w-14 h-14 flex items-center justify-center mb-5">
-            <i class="fa-solid fa-video text-nc-cyan text-2xl"></i>
+        <div class="bg-nc-bg p-8 rounded-3xl border border-slate-100 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center text-white">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-nc-primary">Especialistas CCTV</h3>
           </div>
-          <h3 class="text-xl font-extrabold text-nc-primary">Especialistas CCTV</h3>
-          <ul class="mt-4 space-y-2 text-slate-700 font-medium">
-            <li><i class="fa-solid fa-check text-nc-cyan mr-2"></i> Técnico certificado Hikvision</li>
-            <li><i class="fa-solid fa-check text-nc-cyan mr-2"></i> Configuración, analíticas y app</li>
-            <li><i class="fa-solid fa-check text-nc-cyan mr-2"></i> Mantención preventiva/correctiva</li>
+          <ul class="space-y-2 text-slate-700 font-semibold">
+            <li>• Técnico certificado Hikvision</li>
+            <li>• Configuración, analíticas y app</li>
+            <li>• Mantención preventiva/correctiva</li>
           </ul>
         </div>
 
-        <div class="bg-nc-bg rounded-3xl p-8 border border-slate-100 shadow-sm card-hover transition duration-300">
-          <div class="bg-nc-primary rounded-2xl w-14 h-14 flex items-center justify-center mb-5">
-            <i class="fa-solid fa-screwdriver-wrench text-nc-amber text-2xl"></i>
+        <div class="bg-nc-bg p-8 rounded-3xl border border-slate-100 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center text-white">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-nc-primary">Soporte TI & Infraestructura</h3>
           </div>
-          <h3 class="text-xl font-extrabold text-nc-primary">Soporte TI & Infraestructura</h3>
-          <ul class="mt-4 space-y-2 text-slate-700 font-medium">
-            <li><i class="fa-solid fa-check text-nc-cyan mr-2"></i> Diagnóstico y reparación</li>
-            <li><i class="fa-solid fa-check text-nc-cyan mr-2"></i> Racks, PDU, UPS, ordenamiento</li>
-            <li><i class="fa-solid fa-check text-nc-cyan mr-2"></i> Checklist y evidencia de trabajo</li>
+          <ul class="space-y-2 text-slate-700 font-semibold">
+            <li>• Diagnóstico y reparación</li>
+            <li>• Racks, PDU, UPS, ordenamiento</li>
+            <li>• Checklist y evidencia de trabajo</li>
           </ul>
         </div>
       </div>
@@ -329,67 +324,77 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
         <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-hover transition duration-300">
-          <div class="p-7 text-center">
-            <div class="bg-nc-primary rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <i class="fas fa-network-wired text-nc-cyan text-3xl"></i>
+          <div class="p-7">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center">
+                <i class="fas fa-network-wired text-nc-cyan text-xl"></i>
+              </div>
+              <h3 class="text-xl font-extrabold text-nc-primary">Redes & WiFi</h3>
             </div>
-            <h3 class="text-xl font-extrabold text-nc-primary mb-3">Redes & WiFi</h3>
             <p class="text-slate-600">Diseño, implementación y optimización de red cableada e inalámbrica.</p>
           </div>
         </div>
 
         <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-hover transition duration-300">
-          <div class="p-7 text-center">
-            <div class="bg-nc-primary rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <i class="fas fa-video text-nc-cyan text-3xl"></i>
+          <div class="p-7">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center">
+                <i class="fas fa-video text-nc-cyan text-xl"></i>
+              </div>
+              <h3 class="text-xl font-extrabold text-nc-primary">CCTV</h3>
             </div>
-            <h3 class="text-xl font-extrabold text-nc-primary mb-3">CCTV</h3>
             <p class="text-slate-600">Instalación, configuración, respaldo y mantención preventiva/correctiva.</p>
           </div>
         </div>
 
         <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-hover transition duration-300">
-          <div class="p-7 text-center">
-            <div class="bg-nc-primary rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <i class="fa-solid fa-house-signal text-nc-cyan text-3xl"></i>
+          <div class="p-7">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center">
+                <i class="fas fa-house-signal text-nc-cyan text-xl"></i>
+              </div>
+              <h3 class="text-xl font-extrabold text-nc-primary">Domótica & Automatización</h3>
             </div>
-            <h3 class="text-xl font-extrabold text-nc-primary mb-3">Domótica & Automatización</h3>
             <p class="text-slate-600">Automatización de iluminación, accesos, sensores y control remoto.</p>
           </div>
         </div>
 
         <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-hover transition duration-300">
-          <div class="p-7 text-center">
-            <div class="bg-nc-primary rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <i class="fas fa-laptop-medical text-nc-cyan text-3xl"></i>
+          <div class="p-7">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center">
+                <i class="fas fa-laptop-medical text-nc-cyan text-xl"></i>
+              </div>
+              <h3 class="text-xl font-extrabold text-nc-primary">Soporte TI</h3>
             </div>
-            <h3 class="text-xl font-extrabold text-nc-primary mb-3">Soporte TI</h3>
             <p class="text-slate-600">Diagnóstico, reparación, mantenimiento y puesta a punto de equipos.</p>
           </div>
         </div>
 
         <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-hover transition duration-300">
-          <div class="p-7 text-center">
-            <div class="bg-nc-primary rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <i class="fa-solid fa-server text-nc-amber text-3xl"></i>
+          <div class="p-7">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center">
+                <i class="fas fa-server text-nc-cyan text-xl"></i>
+              </div>
+              <h3 class="text-xl font-extrabold text-nc-primary">Infraestructura</h3>
             </div>
-            <h3 class="text-xl font-extrabold text-nc-primary mb-3">Infraestructura</h3>
             <p class="text-slate-600">Racks, gabinetes, PDU, UPS, PoE y ordenamiento profesional.</p>
           </div>
         </div>
 
         <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden card-hover transition duration-300">
-          <div class="p-7 text-center">
-            <div class="bg-nc-primary rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <i class="fas fa-shield-halved text-nc-amber text-3xl"></i>
+          <div class="p-7">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center">
+                <i class="fas fa-shield-halved text-nc-amber text-xl"></i>
+              </div>
+              <h3 class="text-xl font-extrabold text-nc-primary">Seguridad TI</h3>
             </div>
-            <h3 class="text-xl font-extrabold text-nc-primary mb-3">Seguridad TI</h3>
             <p class="text-slate-600">Hardening básico, respaldos, control de accesos y buenas prácticas.</p>
           </div>
         </div>
-
       </div>
 
       <div class="mt-12 text-center">
@@ -411,17 +416,18 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="portfolio-item relative rounded-3xl overflow-hidden shadow-lg border border-white">
-          <!-- FIX: imagen redes real (patch panel/cableado) -->
-          <img src="https://images.pexels.com/photos/4716292/pexels-photo-4716292.jpeg?cs=srgb&dl=pexels-brett-sayles-4716292.jpg&fm=jpg&v=2"
-               alt="Redes y cableado estructurado" class="w-full h-64 object-cover" loading="lazy">
+          <!-- CAMBIADA: redes (patch panel / cableado) -->
+          <img src="https://images.pexels.com/photos/2881229/pexels-photo-2881229.jpeg?cs=srgb&dl=pexels-brett-sayles-2881229.jpg&fm=jpg"
+               alt="Redes y rack" class="w-full h-64 object-cover" loading="lazy">
           <div class="portfolio-overlay absolute inset-0 bg-nc-primary/85 flex items-center justify-center flex-col p-6">
             <h3 class="text-white text-xl font-extrabold mb-2">Redes</h3>
-            <p class="text-white/90 text-center">Cableado estructurado, patching limpio y conectividad estable</p>
+            <p class="text-white/90 text-center">Rack ordenado, patching limpio y conectividad estable</p>
           </div>
         </div>
 
         <div class="portfolio-item relative rounded-3xl overflow-hidden shadow-lg border border-white">
-          <img src="https://images.pexels.com/photos/14773064/pexels-photo-14773064.jpeg?cs=srgb&dl=pexels-johny-goh-321946023-14773064.jpg&fm=jpg&v=2"
+          <!-- CAMBIADA: CCTV en poste -->
+          <img src="https://images.pexels.com/photos/13168513/pexels-photo-13168513.jpeg?cs=srgb&dl=pexels-kriss-13168513.jpg&fm=jpg"
                alt="CCTV en poste" class="w-full h-64 object-cover" loading="lazy">
           <div class="portfolio-overlay absolute inset-0 bg-nc-primary/85 flex items-center justify-center flex-col p-6">
             <h3 class="text-white text-xl font-extrabold mb-2">CCTV</h3>
@@ -430,7 +436,8 @@
         </div>
 
         <div class="portfolio-item relative rounded-3xl overflow-hidden shadow-lg border border-white">
-          <img src="https://images.pexels.com/photos/7639370/pexels-photo-7639370.jpeg?cs=srgb&dl=pexels-it-services-eu-9278798-7639370.jpg&fm=jpg&v=2"
+          <!-- CAMBIADA: soporte TI -->
+          <img src="https://images.pexels.com/photos/7639355/pexels-photo-7639355.jpeg?cs=srgb&dl=pexels-it-services-eu-9278798-7639355.jpg&fm=jpg"
                alt="Soporte TI" class="w-full h-64 object-cover" loading="lazy">
           <div class="portfolio-overlay absolute inset-0 bg-nc-primary/85 flex items-center justify-center flex-col p-6">
             <h3 class="text-white text-xl font-extrabold mb-2">Soporte TI</h3>
@@ -446,7 +453,7 @@
     <div class="container mx-auto px-6">
       <div class="text-center mb-14">
         <h2 class="text-3xl font-black text-nc-primary">Opiniones <span class="text-nc-cyan">de Clientes</span></h2>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">Experiencias de instalación y mantención</p>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">Experiencias reales de instalación y mantención</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -504,7 +511,6 @@
       </div>
 
       <div class="grid md:grid-cols-2 gap-10">
-        <!-- Info -->
         <div class="space-y-6">
           <div class="bg-white/10 border border-white/15 rounded-3xl p-7">
             <h3 class="text-xl font-extrabold mb-4">Información de Contacto</h3>
