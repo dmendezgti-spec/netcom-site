@@ -56,21 +56,16 @@
       --nc-bg:#F6F8FB;
     }
 
-    /* HERO: fondo pro tipo redes (PEXELS) */
+    /* HERO: fondo pro con racks/luces */
     .hero {
       background:
         radial-gradient(900px 480px at 20% 20%, rgba(0,183,194,.18), transparent 55%),
         radial-gradient(700px 420px at 85% 35%, rgba(255,176,32,.14), transparent 60%),
-        linear-gradient(rgba(11,31,59,.90), rgba(11,31,59,.90)),
-        url('https://images.pexels.com/photos/26822574/pexels-photo-26822574.jpeg?cs=srgb&dl=pexels-robert-clark-504241532-26822574.jpg&fm=jpg');
+        linear-gradient(rgba(11,31,59,.88), rgba(11,31,59,.88)),
+        url('https://images.pexels.com/photos/34225/pexels-photo.jpg?cs=srgb&dl=pexels-pixabay-34225.jpg&fm=jpg');
       background-size: cover;
       background-position: center;
       min-height: 92vh;
-    }
-
-    /* parallax suave solo en desktop */
-    @media (min-width: 768px) {
-      .hero { background-attachment: fixed; }
     }
 
     .card-hover:hover { transform: translateY(-8px); box-shadow: 0 12px 28px rgba(0,0,0,0.18); }
@@ -246,7 +241,7 @@
         <div class="relative">
           <div class="absolute -inset-2 bg-gradient-to-r from-nc-cyan/30 to-nc-amber/25 blur-2xl rounded-3xl"></div>
           <img
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1470&q=80"
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
             alt="Equipo NETCOM trabajando"
             class="relative rounded-3xl shadow-2xl w-full h-auto border border-white/30"
             loading="lazy"
@@ -326,34 +321,37 @@
     <div class="container mx-auto px-6">
       <div class="text-center mb-14">
         <h2 class="text-3xl font-black text-nc-primary">Nuestro <span class="text-nc-cyan">Trabajo</span></h2>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">Proyectos recientes (referenciales)</p>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">Proyectos recientes</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Redes -->
         <div class="portfolio-item relative rounded-3xl overflow-hidden shadow-lg border border-white">
-          <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=1470&q=80"
-               alt="Instalación de red empresarial" class="w-full h-64 object-cover" loading="lazy">
+          <img src="https://images.pexels.com/photos/2881232/pexels-photo-2881232.jpeg?cs=srgb&amp;dl=pexels-bernd-2881232.jpg&amp;fm=jpg"
+               alt="Red corporativa - switch y cableado" class="w-full h-64 object-cover" loading="lazy">
           <div class="portfolio-overlay absolute inset-0 bg-nc-primary/85 flex items-center justify-center flex-col p-6">
             <h3 class="text-white text-xl font-extrabold mb-2">Red Corporativa</h3>
             <p class="text-white/90 text-center">Red estructurada + WiFi optimizado para operación estable</p>
           </div>
         </div>
 
+        <!-- CCTV -->
         <div class="portfolio-item relative rounded-3xl overflow-hidden shadow-lg border border-white">
-          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1470&q=80"
-               alt="Sistema de seguridad con cámaras" class="w-full h-64 object-cover" loading="lazy">
+          <img src="https://images.pexels.com/photos/96612/pexels-photo-96612.jpeg?cs=srgb&amp;dl=pexels-asphotography-96612.jpg&amp;fm=jpg"
+               alt="CCTV - cámaras en exterior" class="w-full h-64 object-cover" loading="lazy">
           <div class="portfolio-overlay absolute inset-0 bg-nc-primary/85 flex items-center justify-center flex-col p-6">
-            <h3 class="text-white text-xl font-extrabold mb-2">CCTV Residencial</h3>
-            <p class="text-white/90 text-center">Instalación + ordenamiento + mantención preventiva</p>
+            <h3 class="text-white text-xl font-extrabold mb-2">CCTV</h3>
+            <p class="text-white/90 text-center">Instalación + mantención + ordenamiento de gabinete</p>
           </div>
         </div>
 
+        <!-- Soporte TI -->
         <div class="portfolio-item relative rounded-3xl overflow-hidden shadow-lg border border-white">
-          <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1471&q=80"
-               alt="Mantenimiento de equipos informáticos" class="w-full h-64 object-cover" loading="lazy">
+          <img src="https://images.pexels.com/photos/7639370/pexels-photo-7639370.jpeg?cs=srgb&amp;dl=pexels-it-services-eu-9278798-7639370.jpg&amp;fm=jpg"
+               alt="Soporte TI - reparación y diagnóstico" class="w-full h-64 object-cover" loading="lazy">
           <div class="portfolio-overlay absolute inset-0 bg-nc-primary/85 flex items-center justify-center flex-col p-6">
-            <h3 class="text-white text-xl font-extrabold mb-2">Mantenimiento TI</h3>
-            <p class="text-white/90 text-center">Mantenimiento preventivo, respaldos y optimización</p>
+            <h3 class="text-white text-xl font-extrabold mb-2">Soporte TI</h3>
+            <p class="text-white/90 text-center">Diagnóstico, reparación y puesta a punto de equipos</p>
           </div>
         </div>
       </div>
@@ -365,19 +363,19 @@
     <div class="container mx-auto px-6">
       <div class="text-center mb-14">
         <h2 class="text-3xl font-black text-nc-primary">Clientes <span class="text-nc-cyan">Satisfechos</span></h2>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">Comentarios referenciales (edítalos a tu gusto)</p>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">Opiniones de clientes (puedes reemplazar por las tuyas cuando quieras)</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-nc-bg p-8 rounded-3xl border border-slate-100 shadow-sm">
           <div class="flex items-center mb-4">
-            <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center text-white font-extrabold mr-4">JM</div>
+            <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center text-white font-extrabold mr-4">CV</div>
             <div>
-              <h4 class="font-extrabold text-nc-primary">Juan Martínez</h4>
-              <p class="text-slate-500 text-sm">Gerente, Empresa Logística</p>
+              <h4 class="font-extrabold text-nc-primary">Cliente verificado</h4>
+              <p class="text-slate-500 text-sm">Condominio</p>
             </div>
           </div>
-          <p class="text-slate-700">"Implementaron la red con orden y dejaron todo documentado. Conectividad estable desde el día 1."</p>
+          <p class="text-slate-700">"Ordenaron el gabinete, dejaron todo etiquetado y el CCTV quedó funcionando impecable. Trabajo limpio."</p>
           <div class="flex mt-4 text-nc-amber">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
@@ -385,13 +383,13 @@
 
         <div class="bg-nc-bg p-8 rounded-3xl border border-slate-100 shadow-sm">
           <div class="flex items-center mb-4">
-            <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center text-white font-extrabold mr-4">AP</div>
+            <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center text-white font-extrabold mr-4">CV</div>
             <div>
-              <h4 class="font-extrabold text-nc-primary">Ana Pérez</h4>
-              <p class="text-slate-500 text-sm">Dueña, Tienda</p>
+              <h4 class="font-extrabold text-nc-primary">Cliente verificado</h4>
+              <p class="text-slate-500 text-sm">Empresa</p>
             </div>
           </div>
-          <p class="text-slate-700">"CCTV funcionando perfecto y lo mejor: dejaron el gabinete ordenado y fácil de mantener."</p>
+          <p class="text-slate-700">"Red estable y WiFi mejoró mucho. Explicaron todo, dejaron evidencias y recomendaciones claras."</p>
           <div class="flex mt-4 text-nc-amber">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
@@ -399,13 +397,13 @@
 
         <div class="bg-nc-bg p-8 rounded-3xl border border-slate-100 shadow-sm">
           <div class="flex items-center mb-4">
-            <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center text-white font-extrabold mr-4">CR</div>
+            <div class="bg-nc-primary rounded-2xl w-12 h-12 flex items-center justify-center text-white font-extrabold mr-4">CV</div>
             <div>
-              <h4 class="font-extrabold text-nc-primary">Carlos Rojas</h4>
-              <p class="text-slate-500 text-sm">Director, Escuela</p>
+              <h4 class="font-extrabold text-nc-primary">Cliente verificado</h4>
+              <p class="text-slate-500 text-sm">Soporte TI</p>
             </div>
           </div>
-          <p class="text-slate-700">"Soporte rápido y claro. Nos explicaron qué fallaba y cómo prevenirlo."</p>
+          <p class="text-slate-700">"Soporte rápido: diagnosticaron, repararon y dejaron los equipos listos. Se nota el criterio técnico."</p>
           <div class="flex mt-4 text-nc-amber">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
           </div>
@@ -619,5 +617,4 @@
   </script>
 </body>
 </html>
-
 
