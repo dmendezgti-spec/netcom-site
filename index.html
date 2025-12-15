@@ -56,25 +56,23 @@
       --nc-bg:#F6F8FB;
     }
 
-    /* HERO v2 (datacenter pro) */
+    /* HERO (datacenter pro) */
     .hero {
       background:
         radial-gradient(900px 520px at 18% 18%, rgba(0,183,194,.22), transparent 55%),
         radial-gradient(780px 460px at 85% 35%, rgba(255,176,32,.16), transparent 60%),
         linear-gradient(rgba(11,31,59,.86), rgba(11,31,59,.90)),
-        url('https://images.pexels.com/photos/5480781/pexels-photo-5480781.jpeg?cs=srgb&dl=pexels-meo-5480781.jpg&fm=jpg&v=2');
+        url('https://images.pexels.com/photos/5480781/pexels-photo-5480781.jpeg?cs=srgb&dl=pexels-meo-5480781.jpg&fm=jpg&v=3');
       background-size: cover;
       background-position: center;
       min-height: 92vh;
     }
 
-    /* mejora visual: un toque de nitidez/contraste con overlay sutil */
     .hero::before{
       content:"";
       position:absolute;
       inset:0;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.05));
+      background: linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.06));
       pointer-events:none;
     }
 
@@ -258,9 +256,10 @@
 
         <div class="relative">
           <div class="absolute -inset-2 bg-gradient-to-r from-nc-cyan/30 to-nc-amber/25 blur-2xl rounded-3xl"></div>
+          <!-- FIX: imagen pro (servidores/rack) -->
           <img
-            src="https://images.pexels.com/photos/8729559/pexels-photo-8729559.jpeg?cs=srgb&dl=pexels-ono-kosuki-8729559.jpg&fm=jpg&v=2"
-            alt="Trabajo en rack y conectividad"
+            src="https://images.pexels.com/photos/17323801/pexels-photo-17323801.jpeg?cs=srgb&dl=pexels-cookiecutter-17323801.jpg&fm=jpg&v=2"
+            alt="Infraestructura en rack y conectividad"
             class="relative rounded-3xl shadow-2xl w-full h-auto border border-white/30"
             loading="lazy"
           />
@@ -412,11 +411,12 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="portfolio-item relative rounded-3xl overflow-hidden shadow-lg border border-white">
-          <img src="https://images.pexels.com/photos/8729559/pexels-photo-8729559.jpeg?cs=srgb&dl=pexels-ono-kosuki-8729559.jpg&fm=jpg&v=2"
-               alt="Redes y rack" class="w-full h-64 object-cover" loading="lazy">
+          <!-- FIX: imagen redes real (patch panel/cableado) -->
+          <img src="https://images.pexels.com/photos/4716292/pexels-photo-4716292.jpeg?cs=srgb&dl=pexels-brett-sayles-4716292.jpg&fm=jpg&v=2"
+               alt="Redes y cableado estructurado" class="w-full h-64 object-cover" loading="lazy">
           <div class="portfolio-overlay absolute inset-0 bg-nc-primary/85 flex items-center justify-center flex-col p-6">
             <h3 class="text-white text-xl font-extrabold mb-2">Redes</h3>
-            <p class="text-white/90 text-center">Rack ordenado, patching limpio y conectividad estable</p>
+            <p class="text-white/90 text-center">Cableado estructurado, patching limpio y conectividad estable</p>
           </div>
         </div>
 
@@ -446,7 +446,7 @@
     <div class="container mx-auto px-6">
       <div class="text-center mb-14">
         <h2 class="text-3xl font-black text-nc-primary">Opiniones <span class="text-nc-cyan">de Clientes</span></h2>
-        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">Experiencias reales de instalación y mantención</p>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto mt-3">Experiencias de instalación y mantención</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -703,4 +703,3 @@
   </script>
 </body>
 </html>
-
